@@ -1,4 +1,10 @@
 Storit::Application.routes.draw do
+  resources :applications
+
+  resources :content_blocks
+
+  resources :users
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

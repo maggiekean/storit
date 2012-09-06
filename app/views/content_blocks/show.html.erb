@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Content:</b>
+  <%= @content_block.content %>
+</p>
+
+<p>
+  <b>Application:</b>
+  <%= @content_block.application_id %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_content_block_path(@content_block) %> |
+<%= link_to 'Back', content_blocks_path %>
