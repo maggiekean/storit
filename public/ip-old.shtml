@@ -1,0 +1,119 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	
+  <meta charset="utf-8">
+  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+       More info: h5bp.com/i/378 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title></title>
+  <meta name="description" content="">
+
+  <!-- Mobile viewport optimized: h5bp.com/viewport -->
+  <meta name="viewport" content="width=device-width">
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+
+<link href="css/style.css" media="screen" rel="stylesheet" type="text/css"> 
+<link href="css/layout.css" media="screen" rel="stylesheet" type="text/css"> 
+<link href="css/animation.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="css/dropdown/dropdown.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="css/dropdown/dropdown.vertical.rtl.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="css/dropdown/default.ultimate.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+<link type="text/css" rel="stylesheet" href="css/jquery/custom.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Andada' rel='stylesheet' type='text/css'>
+<script src="js/jquery-inline-footnotes.js"></script>
+  <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+
+  <!-- Took JS Modernizer out - mak -->
+
+</head>
+<body id="page1" >
+  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started -->
+  <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+<div id="masterContainer">  
+	<header>
+				<!--#include file="nav.html" -->
+	</header>
+	  <div id="mainContainer" style="clear: both">
+			<div id="mainContent">
+				<div id="IPContent">
+					<img src="images/ip.jpg">
+					<h1>The Intellectual Property/Food Security Connection</h1>
+						<p>
+						There are a lot of different ideas about the challenges and pathways to achieve global food security. New and improved plant varieties are one way of achieving better yields and adaptability to global change thus contributing to food security.
+					</p><p>
+							Plant variety protection (PVP) is a type of intellectual property intended to provide an incentive to invest in research and development of new and improved plant varieties <span class="upov-provisions-intext"><a href="#">(UPOV Provisions)</a></span>.  But like all intellectual property, PVP protects only varieties that fit within certain strict criteria, usually that the variety be distinct, uniform and stable <span class="upov-provisions-intext"><a href="#">(UPOV Provisions)</a></span> UPOV and UPOV-style systems are designed to protect new varieties developed by professional plant breeders from public and private institutions.  Through its definition and processes, mainstream PVP has supported the development of plant varieties that are high yielding, genetically homogeneous and stable, and well adapted to large-scale industrialized agriculture.  Farmers’ varieties or landraces, are genetically heterogeneous and unstable over repeated cycles of propagation, and therefore do not fit the criteria of typical PVP systems.
+					</p><p>
+							People have been conserving and developing plant varieties since Neolethic times when humans began to slowly make a transition from hunting and gathering to agriculture and in that process began to whittle down the number of species used for food.  There was a reduction in the number of species used for food but an explosion in diversity, a diversity from recombination of genes as plants were bred and crossed.  It is only in the last several decades that intellectual property created the legal means to extract benefits from developing new plant varieties, and these IP systems, including PVP systems, are constructed so that benefits accrue to professional plant breeders and scientists with no similar benefit mechanisms for the conservation or innovative activities of farmers.<span id="farmers-intext" ><a href="#">(Farmers&rsquo; Rights)</a></span></p>
+							<p>
+							IP therefore associated with creating incentives for private sector breeders and scientists to develop new, uniform and stable varieties.  Prior to the widespread establishment of plant variety protection in industrialized countries, publicly and private philanthropy funded public sector plant breeders developed a new set of high yielding varieties that greatly increased agricultural production particularly in rice and wheat.  This effort, referred to as the Green Revolution, increased production and incomes where field conditions could be standardized by providing inputs such as water and fertilizer so that economies of scale could be achieved.  It largely bypassed areas were input intensive agriculture was not economically and/or environmentally feasible.   With intellectual property protection, including PVP, agricultural research in industrialized countries became an increasingly private sector endeavor with a concomitant expansion of large-scale commercial agriculture.  The large scale agriculture begun under the Green Revolution and expanded through private sector involvement has increased productivity but is also the main driver for the loss of agrobiodiversity<span id="diversity-intext" ><a href="#">(Importance of Biological Diversity)</a><sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>, is the largest single source of greenhouse gas emissions, uses 70% of the freshwater resources available today and is a source of toxicity and water pollution from the use of pesticides and fertilizers.  
+					</p><p>
+							This is not to say that large scale farming is inappropriate in all cases or that professional plant breeders and scientists do not have an important role to play in the development of varieties and technologies to face the challenges of creating a more sustainable agriculture and food system.  The world has made great leaps in production, yet the overall number of people affected by chronic hunger has hardly changed.  Half the food produced today is produced by 1.5 billion farmers working on small plots of land for which monocultures would never be sustainable.
+					</p><p>
+							If the intellectual property is a balance between creating incentives and benefits to society, if UPOV’s own mission is to promote plant breeding for the benefit of society, we need to understand better whom the IP system is serving and who it is not.  And it is not just about leaving certain segments about the population behind, we need to understand clearly the potential impact intellectual property regimes have or may have on current options such as the ability of farmer’s to save and exchange seed. (<span id="upov-questions-intext"><a href="#">UPOV Critical Questions</a></span>, <span id="farmers-intext" ><a href="#">Farmers&rsquo; Rights</a></span>).   We need to understand what the technology preferences implicit in IP driven agricultural policies are.   It is clear that it is not neutral with respect to development goals and long-term sustainability.
+					</p><p>
+							Futhermore, there is a need greater clarity on the links between IP policy-making and sustainable development, in particular food security and poverty alleviation.  Lots of money spent developing, implementing and enforcing IP regimes.  Effort needs to be spent in understanding the connections. </p>
+					<p>(insert PVP graphic here)</p>
+					<p>
+							 Today, the world is stuck in a vicious cycle that locks farmers, governments, companies and communities in the pursuit of short-term, narrowly defined solutions to food, energy, and water conflicts as they emerge,” said Sara Scherr, president and CEO of  EcoAgriculture Partners, a co-organizer of the Initiative. “We are often solving one problem while exacerbating another, using blinkered crisis management approaches.<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>” 
+					</p><p>
+							We need to have a serious discourse about the food security and developmental implications for changes in the legal status of plant genetic resources for food and agriculture under current and proposed intellectual property rights regimes.  And the dialogue needs to be inclusive, to include not just the private sector and political elite, but farmers and the associations that represent them.  Dutfield highlights that interest group politics should ‘strongly discourage any expectation that patents and [PVPs]…finely balance the interests of existing owners, users and the pubic, while optimally encouraging wealth-enhancing innovation.” 
+					</p><p>
+							The UN Special Rapporteur on the Right to Food has portrayed the need for ‘a marked paradigm shift…from a system seeking to foster food security on the basis of the free exchange of knowledge to a system seeking to achieve the same goal on the basis of the private appropriation of knowledge’ UN (2004)<sup id="fnref:3"><a href="#fn:2" rel="footnote">3</a></sup>.
+					</p><p>
+							The International Center for Trade and Sustainable Development discusses the  need to support better participation in IP rule making and argues that it is necessary to broaden “the scope of IP assistance programs to encompass a package of policy reforms and capacity building aimed at stimulating more local innovation through R&amp;D to improve productivity and competitiveness, as well as greater use of the IP system by small and medium enterprises.”<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup>
+					</p><p>
+							We cannot decouple discussions of intellectual property systems, including PVP, from the broader issues of food security.  If intellectual property is to operate for the “benefit of society” we need to broaden the conversation and better understand the interconnections so the private sector can do what it does best, the public sector can be sufficiently strong and we can forge effective alliances among civil, public and the private sectors.
+							</p>
+
+							<div class="footnotes">
+							  <hr>
+							  <ol>
+							   <li id="fn:1">
+							    <p>
+							     State of the World Report of FAO “The chief contemporary cause of the loss of genetic diversity has been the spread of modern, commercial agriculture.” Chapter 1, 1998. Pages 13-4. 
+							 </p>
+							    <a href="#fnref:1" rev="footnote">↩</a>   
+							   </li>
+
+							   <li id="fn:2">
+							    <p>
+							     <a href="http://www.ecoagriculture.org/">www.ecoagriculture.org</a>
+							  </p>
+							    <a href="#fnref:2" rev="footnote">↩</a>  
+							   </li>
+							 <li id="fn:3">
+							    <p>
+
+									Report by the Special Rapporteur on the Right to Food, submitted in accordance with the Commission on Human Rights Resolution 2003/25’, E/CN.4/2004/10
+							 </p>
+							    <a href="#fnref:3" rev="footnote">↩</a>   
+							   </li>
+
+							   <li id="fn:4">
+							    <p>
+								  Thomas Pengelley, June 2005. Technical Assistance for the Formulation and Implementation of Intellectual Property Policy in Developing Countries and Transition Economies.<a href="http://www.iprsonline.org/unctadictsd/docs/Pengelly_TA_FINAL.pdf">PDF</a>
+							  </p>
+							    <a href="#fnref:4" rev="footnote">↩</a>  
+							   </li>
+							  </ol>
+							 </div>
+				</div>
+			</div> <!-- #mainContent -->
+		</div> <!-- #mainContainer -->
+	</div> <!-- #masterContainer -->
+
+
+</body>
+</html>

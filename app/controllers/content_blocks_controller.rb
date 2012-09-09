@@ -34,7 +34,7 @@ class ContentBlocksController < ApplicationController
 
   # GET /content_blocks/1/edit
   def edit
-    @content_block = ContentBlock.find(params[:id])
+    @content_block = ContentBlock.find(params[:id]).dup
   end
 
   # POST /content_blocks

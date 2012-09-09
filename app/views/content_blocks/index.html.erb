@@ -1,24 +1,16 @@
 <h1>Listing content_blocks</h1>
 
-<table>
-  <tr>
-    <th>Content</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
 <% @content_blocks.each do |content_block| %>
-  <tr>
-    <td><%= content_block.content %></td>
-    <td><%= content_block.application_id %></td>
-    <td><%= link_to 'Show', content_block %></td>
-    <td><%= link_to 'Edit', edit_content_block_path(content_block) %></td>
-    <td><%= link_to 'Destroy', content_block, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+<% if  content_block.heading != "IMAGE" %> 
+<h3><%= content_block.heading %></h3>
 <% end %>
-</table>
-
-<br />
+<h3>Section: <%= Section.find_by_id(content_block.section_id).name %> Page Order ID: <%= content_block.page_order_id %> ID <%= content_block.id %></h3>
+<% if content_block.editor_accessible %> Block is editable.
+<% end %>
+<%= raw(content_block.content) %><p>
+<%= link_to 'Show', content_block %>
+<%= link_to 'Edit', edit_content_block_path(content_block) %>
+<%= link_to 'Destroy', content_block, method: :delete, data: { confirm: 'Are you sure?' } %><p>
+<% end %>
 
 <%= link_to 'New Content block', new_content_block_path %>

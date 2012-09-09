@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+/** 
+ * Default Ultimate Linear CSS Drop-Down Menu Theme
+ *
+ * @file		default.ultimate.css
+ * @name		Default
+ * @version		0.1
+ * @type		transitional
+ * @browsers	Windows: IE7+, Opera7+, Firefox3+
+ *				Mac OS: Safari2+, Firefox3+
+ *
+ * @link		http://www.lwis.net/free-css-drop-down-menu
+ * @copyright	2008-2012 Live Web Initiatives, http://www.lwis.net
+ *
+ */
+
+@import "default.css";
+
+
+/* -- Base style extension -- */
+
+ul.dropdown {
+font-family: shannon-book;
+	font-size: 14px;
+	border: 1px solid #42371b;
+	border-radius: 5px;
+	margin-bottom: 3px;
+	background-color: #60835b;
+}
+
+
+ul.dropdown a,
+ul.dropdown span {
+ display: block;
+}
+
+ul.dropdown li {
+ color: #ffffff;
+ padding: 10px 25px;
+	margin: 0;
+
+}
+
+ul.dropdown li.middle {
+border-left: 1px solid #42371b;
+}
+
+/*
+ul.dropdown li.first {
+border-radius: 5px 0 0 5px;
+border-right: 1px solid #42371b;
+}
+
+ul.dropdown li.last {
+border-radius: 0 5px 5px 0;
+}
+*/
+
+ul.dropdown li:hover,
+ul.dropdown li.on {
+ color: #ffffff;
+
+}
+
+
+ul.dropdown a:link,
+ul.dropdown a:visited	{ color: #ffffff; text-decoration: none; }
+ul.dropdown a:hover		{ color: #42371b; }
+ul.dropdown a:active	{ color: #ffffff; }
+
+ul.dropdown ul li {
+	 font-family: shannon-bold;
+ 	float: none;
+	opacity: .95;	
+	font-size: 12px;
+	border-bottom: 1px solid #42371b;
+}
+
+
+ul.dropdown ul {
+		background-color: #60835b;	
+	}
+

@@ -1,0 +1,29 @@
+/*======= index.html =======*/
+#page1  .col-1 {width:560px; margin-right:20px;}
+#page1  .col-2 { width:360px;}
+
+/*======= home.html =======
+#page1h  .col-1 {width:600px; margin-right:25px;}
+#page1h  .col-2 { width:100px;}
+#
+#page1h  .line-ver { background-position:640px 0;}*/
+#page1h  .line-ver { background-position:480px 0;}
+#page1h  .col-1 {width:450px; margin-right:60px;}
+#page1h  .col-2 { width:420px;}
+#page1h  .col-1 .col-1 {width:209px; margin-right:25px;}
+#page1h  .col-1 .col-2 {width:226px;}
+
+/*ip */
+#page2  .row-1 .line-ver { background-position:492px 0;}
+#page2  .row-1 .col-1 {width:440px; margin-right:20px;}
+#page2  .row-1 .col-2 { width:560px;}
+#page2  .row-2 .col-1 {width:360px; margin-right:20px;}
+#page2  .row-2 .col-2 { width:560px;}
+#page2  .row-3 .col-1 {width:960px;}
+
+/*ip benefits*/
+#page2b  .row-2 .col-1 {width:405px; margin-right:20px;}
+#page2b  .row-2 .col-2 { width:535px;}
+#page2b  .row-2 { width: 960px;}
+
+/*ip experts*/

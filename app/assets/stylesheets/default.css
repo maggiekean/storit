@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+/** 
+ * Default CSS Drop-Down Menu Theme
+ *
+ * @file		default.css
+ * @name		Default
+ * @version		0.1.1
+ * @type		transitional
+ * @browsers	Windows: IE7+, Opera7+, Firefox3+
+ *				Mac OS: Safari2+, Firefox3+
+ *
+ * @link		http://www.lwis.net/free-css-drop-down-menu
+ * @copyright	2008-2012 Live Web Initiatives, http://www.lwis.net
+ *
+ */
+
+
+/* -- Base drop-down styling -- */
+
+ul.dropdown {
+ font-weight: normal;
+}
+
+
+	/* -- level mark -- */
+
+	ul.dropdown ul {
+	 margin-top: 1px;
+	}
+
+		ul.dropdown ul li {
+		 font-weight: normal;
+		}
+
+
+/* -- Supporting class `dir` -- */
+
+ul.dropdown *.dir {
+	padding-right: 30px;
+ background-image: url(../../images/nav-arrow-down.png);
+ background-position: 100% 50%;
+ background-repeat: no-repeat;
+border-right: 1px solid #42371b;
+}
+
+
+/* -- Components override -- */
+
+ul.dropdown-horizontal ul *.dir {
+ padding-right: 15px;
+ background-image: url(../../images/nav-arrow-right.png);
+ background-position: 100% 50%;
+ background-repeat: no-repeat;
+}
+
+ul.dropdown-upward *.dir {
+ background-image: url(../../images/nav-arrow-top.png);
+}
+
+ul.dropdown-vertical *.dir,
+ul.dropdown-upward ul *.dir {
+ background-image: url(../../images/nav-arrow-right.png);
+}
+
+ul.dropdown-vertical-rtl *.dir,
+ul.dropdown-horizontal > li.dropdown-vertical-rtl ul *.dir {
+ padding-right: 10px;
+ padding-left: 15px;
+ background-image: url(../../images/nav-arrow-left.png);
+ background-position: 2px 50%;
+}

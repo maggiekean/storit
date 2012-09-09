@@ -1,0 +1,42 @@
+
+<div id="mainContent">
+	<div id="IPContent">
+		<div class="indent">
+	   	<div class="row-1 ">
+	    	<h1>Plant Variety Protection &amp; Food Security</h1>
+	    	<div class="wrapper">
+	     	<img src="images/sec-woman.png" alt="" style="float: left; 	margin: 0 30px 10px 0;	">
+	      <h2>New and improved plant varieties are one way of achieving better yields and adaptability to global change, both of which are important to food security.</h2>
+	     	<% id = 0 %>
+			<% @content_blocks.each do |c| %>
+				<% if c.page_order_id != id %>
+					<% if  c.heading != "IMAGE" %> 
+						<h3><%= c.heading %></h3>
+					<% end %>					
+					<%= raw(c.content) %>
+					<% id = c.page_order_id %>
+				<% end %>
+			<% end %>	     </div>
+	    </div>
+		<div class="footnotes">
+		  <hr>
+		  <ol>
+		   <li id="fn:1">
+		    <p>
+		     State of the World Report of FAO “The chief contemporary cause of the loss of genetic diversity has been the spread of modern, commercial agriculture.” Chapter 1, 1998. Pages 13-4. 
+		 </p>
+		    <a href="#fnref:1" rev="footnote">↩</a>   
+		   </li>
+
+		  
+		  </ol>
+		 </div>
+
+</div> <!-- #mainContent -->
+<% content_for :javascript do %>	  
+<script>
+$(document).ready(function() {
+		$("[rel=footnote]").inlineFootnote();	
+	});
+</script>
+<% end %>

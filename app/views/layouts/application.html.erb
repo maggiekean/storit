@@ -3,12 +3,23 @@
 <head>
   <title>Storit</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag  "public_pages" %>
   <%= javascript_include_tag "application" %>
+
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body >
+	<div id="masterContainer">  
+		<header>
+			<%= render 'shared/nav' %>
+			<h1 style="padding-left: 20px;">Administration Pages</h1>
+			<hr \>
+		</header>
+		<div id="mainContainer" style="clear: both; padding-top: 20px;">
 
-<%= yield %>
-
+		<%= yield %>
+	</div>
+</div>
+	<%= yield :javascript %>	
 </body>
 </html>

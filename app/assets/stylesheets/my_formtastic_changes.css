@@ -1,0 +1,16 @@
+.formtastic .stringish input {
+  width: auto;
+}
+.formtastic .input .label  {
+  width: 15%;
+}
+.formtastic .boolean label  {
+padding-left: 15%;
+}
+.formtastic .boolean label  {
+padding-left: 15%;
+}
+.formtastic .buttons, .formtastic .actions {
+overflow: hidden;
+padding-left: 15%;
+}

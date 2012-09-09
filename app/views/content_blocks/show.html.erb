@@ -1,16 +1,26 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <b>Heading:</b>
+  <%= @content_block.heading %>
+</p>
+<p>
   <b>Content:</b>
-  <%= @content_block.content %>
+  <%= raw(@content_block.content) %>
 </p>
 
 <p>
-  <b>Application:</b>
-  <%= @content_block.application_id %>
+  <b>Section:</b>
+  <%= @content_block.section_id %>
+</p>
+<p>
+  <b>Page Order:</b>
+  <%= @content_block.page_order_id %>
+</p>
+  <b>ID:</b>
+  <%= @content_block.id %>
 </p>
 
 
-
 <%= link_to 'Edit', edit_content_block_path(@content_block) %> |
-<%= link_to 'Back', content_blocks_path %>
+<%= link_to 'Back to Section', admin_back_path(:section_id => @content_block.section_id) %>

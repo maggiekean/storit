@@ -1,6 +1,8 @@
-<h1>Editing content_block</h1>
-
+<div id="mainContent">
+<h2>Editing Content Block </h2>
+<h3>Section: <%= Section.find_by_id(@content_block.section_id).name %>, Page Order: <%= @content_block.page_order_id %></h3>
+<%= link_to 'View Editing History', admin_history_path(:section_id => @content_block.section_id, :page_order_id => @content_block.page_order_id) %> |
+<%= link_to 'Back to Section', admin_back_path(:section_id => @content_block.section_id) %>
+<p>
 <%= render 'form' %>
-
-<%= link_to 'Show', @content_block %> |
-<%= link_to 'Back', content_blocks_path %>
+</div>
