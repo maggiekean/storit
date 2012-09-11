@@ -4,6 +4,7 @@ gem "ckeditor", "3.7.1"
 gem 'rails', '3.2.8'
 gem "paperclip"
 gem 'formtastic'
+gem 'bcrypt-ruby', '3.0.1'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
