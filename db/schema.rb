@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120911155850) do
+ActiveRecord::Schema.define(:version => 20120911163753) do
 
   create_table "applications", :force => true do |t|
     t.string   "name"
@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(:version => 20120911155850) do
     t.datetime "updated_at",        :null => false
     t.integer  "section_id"
     t.string   "heading"
-    t.integer  "editor_id"
+    t.integer  "user_id"
     t.integer  "page_order_id"
     t.boolean  "editor_accessible"
   end

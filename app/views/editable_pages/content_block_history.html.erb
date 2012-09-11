@@ -3,7 +3,7 @@
 <h2>History for Section <%= @content_blocks.first.section_id %>, Page Order <%= @content_blocks.first.page_order_id %></h2>
 <% @content_blocks.each do |c| %>
 	<hr />
-CB id <%= c.id %>, editor is <%= Editor.find_by_id(c.editor_id).name %>
+CB id <%= c.id %>, editor is <%= c.user.name %>
 	<% if  c.heading != "IMAGE" %> 
 		<h3><%= c.heading %></h3>
 	<% end %>	

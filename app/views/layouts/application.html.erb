@@ -15,6 +15,9 @@
 			<h1 style="padding-left: 20px;">Administration Pages</h1>
 			<hr \>
 		</header>
+		<% flash.each do |key, value| %>
+	        <div class="alert alert-<%= key %>"><%= value %></div>
+	      <% end %>
 		<div id="mainContainer" style="clear: both; padding-top: 20px;">
 
 		<%= yield %>

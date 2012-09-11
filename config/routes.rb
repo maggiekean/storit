@@ -1,6 +1,4 @@
 Storit::Application.routes.draw do
-  resources :editors
-
   mount Ckeditor::Engine => '/ckeditor'  
   resources :sections
 
@@ -24,6 +22,7 @@ Storit::Application.routes.draw do
   match '/admin/ip', to: 'editable_pages#ip_overview'
   match '/admin/history', to: 'editable_pages#content_block_history'
   match '/admin/back', to: 'editable_pages#back'
+  match '/signup',  to: 'users#new'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

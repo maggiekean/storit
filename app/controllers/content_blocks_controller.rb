@@ -1,40 +1,23 @@
 class ContentBlocksController < ApplicationController
   # GET /content_blocks
-  # GET /content_blocks.json
   def index
     @content_blocks = ContentBlock.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @content_blocks }
-    end
   end
 
   # GET /content_blocks/1
-  # GET /content_blocks/1.json
   def show
     @content_block = ContentBlock.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @content_block }
-    end
   end
 
   # GET /content_blocks/new
-  # GET /content_blocks/new.json
   def new
     @content_block = ContentBlock.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @content_block }
-    end
   end
 
   # GET /content_blocks/1/edit
   def edit
     @content_block = ContentBlock.find(params[:id]).dup
+ #   @content_block.user = current user
   end
 
   # POST /content_blocks

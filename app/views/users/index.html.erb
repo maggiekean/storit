@@ -1,7 +1,8 @@
-<h1>Listing users</h1>
+<div id="mainContent">
+	<h1>Listing users</h1>
 
 <table>
-  <tr>
+  <tr height="50">
     <th>Name</th>
     <th>Email</th>
     <th></th>
@@ -11,10 +12,10 @@
 
 <% @users.each do |user| %>
   <tr>
-    <td><%= user.name %></td>
-    <td><%= user.email %></td>
-    <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Edit', edit_user_path(user) %></td>
+    <td width="200"><%= user.name %></td>
+    <td width="200"><%= user.email %></td>
+    <td><%= link_to 'Show', user %> &nbsp;|&nbsp;</td>
+    <td><%= link_to 'Edit', edit_user_path(user) %>&nbsp;|&nbsp;</td>
     <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
@@ -23,3 +24,4 @@
 <br />
 
 <%= link_to 'New User', new_user_path %>
+</div>
