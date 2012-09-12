@@ -1,6 +1,6 @@
 <div id="mainContent">
 <p>
-<h2>History for Section <%= @content_blocks.first.section_id %>, Page Order <%= @content_blocks.first.page_order_id %></h2>
+<h2>History for Section <%= @content_blocks.first.section_id %>, Page Order <%= @content_blocks.first.position %></h2>
 <% @content_blocks.each do |c| %>
 	<hr />
 CB id <%= c.id %>, editor is <%= c.user.name %>
@@ -8,7 +8,7 @@ CB id <%= c.id %>, editor is <%= c.user.name %>
 		<h3><%= c.heading %></h3>
 	<% end %>	
 	<%= raw(c.content) %>
-	<% id = c.page_order_id %>
+	<% id = c.position %>
 
 <% end %>
 </div> <!-- #mainContent -->

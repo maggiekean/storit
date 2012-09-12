@@ -1,16 +1,18 @@
+<div id="mainContent"
 <h1>Listing content_blocks</h1>
 
 <% @content_blocks.each do |content_block| %>
 <% if  content_block.heading != "IMAGE" %> 
 <h3><%= content_block.heading %></h3>
 <% end %>
-<h3>Section: <%= Section.find_by_id(content_block.section_id).name %> Page Order ID: <%= content_block.page_order_id %> ID <%= content_block.id %></h3>
+<h3>Section: <%= content_block.section.name %>, Position: <%= content_block.position %>,  ID <%= content_block.id %>, Edited by: <%= content_block.user.name %></h3>
 <% if content_block.editor_accessible %> Block is editable.
 <% end %>
 <%= raw(content_block.content) %><p>
-<%= link_to 'Show', content_block %>
-<%= link_to 'Edit', edit_content_block_path(content_block) %>
+<%= link_to 'Show', content_block %> &nbsp;|&nbsp;
+<%= link_to 'Edit', edit_content_block_path(content_block) %> &nbsp;|&nbsp;
 <%= link_to 'Destroy', content_block, method: :delete, data: { confirm: 'Are you sure?' } %><p>
 <% end %>
 
 <%= link_to 'New Content block', new_content_block_path %>
+</div>

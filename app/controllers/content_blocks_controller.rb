@@ -12,12 +12,16 @@ class ContentBlocksController < ApplicationController
   # GET /content_blocks/new
   def new
     @content_block = ContentBlock.new
+    @content_block.section_id = params[:section_id]
+    @content_block.user_id = current_user.id
+    current_max = Section.find_by_id(3).content_blocks.max_by(&:position)
+    @content_block.position = current_max.position + 1
   end
 
   # GET /content_blocks/1/edit
   def edit
     @content_block = ContentBlock.find(params[:id]).dup
- #   @content_block.user = current user
+    @content_block.user_id = current_user.id
   end
 
   # POST /content_blocks

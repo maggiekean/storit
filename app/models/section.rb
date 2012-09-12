@@ -1,4 +1,4 @@
 class Section < ActiveRecord::Base
   attr_accessible :name
-  has_many :content_blocks
+  has_many :content_blocks, :order => "position"
 end

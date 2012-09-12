@@ -2,6 +2,7 @@ class EditablePagesController < ApplicationController
   layout 'application'
   def ip_overview
     @content_blocks = ContentBlock.order("page_order_id, created_at DESC").where({ :section_id => 3 })
+    @section = Section.find_by_name("ip_overview")
   end
   
   def content_block_history

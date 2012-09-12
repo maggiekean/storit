@@ -7,7 +7,7 @@ Storit::Application.routes.draw do
   resources :content_blocks
 
   resources :users
-  
+  resources :sessions, only: [:new, :create, :destroy]
   match '/home', to: 'public_pages#home'
   match '/contact', to: 'public_pages#contact'
   match '/ip', to: 'public_pages#ip'
@@ -23,6 +23,9 @@ Storit::Application.routes.draw do
   match '/admin/history', to: 'editable_pages#content_block_history'
   match '/admin/back', to: 'editable_pages#back'
   match '/signup',  to: 'users#new'
+  match '/signup',  to: 'users#new'
+  match '/signin',  to: 'sessions#new'
+  match '/signout', to: 'sessions#destroy'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
