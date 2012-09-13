@@ -42,6 +42,7 @@ class ContentBlocksController < ApplicationController
     respond_to do |format|
       if @content_block.save
         redirect_to @content_block, notice: 'Content block was successfully created.' 
+      else
          render "new" 
       end
     end
