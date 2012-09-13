@@ -6,21 +6,20 @@
 	    	<div class="wrapper">
 	     	<%= image_tag("sec-woman.png", :class => "image_left") %>
 	      <h2>New and improved plant varieties are one way of achieving better yields and adaptability to global change, both of which are important to food security.</h2>
-			<% id = 0 %>
-			<% @content_blocks.each do |c| %>
-				<% if c.position != id %>
-					<% if  c.editor_accessible %>
-						<div class="editable">			
-					<% end %>
-					<% if  c.heading != "IMAGE" %> 
-						<h3><%= c.heading %></h3>
-					<% end %>	
-				
-					<%= raw(c.content) %>
-					<% if  c.editor_accessible %>
-						<%= link_to image_tag("/assets/pencil.png"), edit_content_block_path(c) %></div>
-					<% end %>
-					<% id = c.position %>
+			<% if (@content_blocks)  %>
+				<% @content_blocks.each do |c| %>
+						<% if  c.editor_accessible %>
+							<div class="editable">			
+						<% end %>
+						<h3><%= c.heading %></h3>	
+						<%= c.position %>
+						<%= raw(c.content) %>
+						<% if  c.editor_accessible %>
+							<%= link_to image_tag("/assets/pencil.png", :title => "Edit"), edit_content_block_path(c) %>
+							<%= link_to image_tag("/assets/magnify.png", :title => "Closer Look"), content_block_path(c) %>
+							<%= link_to image_tag("/assets/history.png", :title => "View Editing History"), content_block_path(c), :history => TRUE %>
+							</div>
+						<% end %>
 				<% end %>
 			<% end %>
 </div>
@@ -45,25 +44,6 @@
 <script>
 $(document).ready(function() {
 		$("[rel=footnote]").inlineFootnote();
-		$('#content_blocks').sortable({
-		axis: 'y',
-		dropOnEmpty: false,
-		handle: '.handle',
-		cursor: 'crosshair',
-		items: 'li',
-		opacity: 0.4,
-		scroll: true,
-		update: function(){
-		$.ajax({
-		type: 'post',
-		data: $('#content_blocks').sortable('serialize'),
-		dataType: 'script',
-		complete: function(request){
-		$('#content_blocks').effect('highlight');
-		},
-		url: '/content_blocks/sort'})
-		}
-		});
 });
 </script>
 <% end %>

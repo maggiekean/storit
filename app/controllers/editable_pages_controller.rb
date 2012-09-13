@@ -1,12 +1,24 @@
 class EditablePagesController < ApplicationController
-  layout 'application'
+  layout 'editable_pages'
   def ip_overview
-    @content_blocks = ContentBlock.order("page_order_id, created_at DESC").where({ :section_id => 3 })
     @section = Section.find_by_name("ip_overview")
+    @content_blocks = ContentBlock.find_all_by_section_id(@section.id)
+      
+  end
+
+  def ip_sort
+    @section = Section.find_by_name("ip_overview")
+    @content_blocks = ContentBlock.find_all_by_section_id(@section.id)
+    @content_blocks.each do |content_block|
+      content_block.position = params['content_block'].index(content_block.id.to_s) + 1
+      content_block.save
+    end
+  render :nothing => true
   end
   
-  def content_block_history
-    @content_blocks = ContentBlock.order("created_at DESC").where({ :section_id => params[:section_id], :page_order_id => params[:page_order_id]  })
+  def ip_overview_sort
+    @section = Section.find_by_name("ip_overview")
+    @content_blocks = ContentBlock.find_all_by_section_id(@section.id)
   end
   
   def back

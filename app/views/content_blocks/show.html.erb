@@ -1,26 +1,12 @@
+<div id="mainContent">
 <p id="notice"><%= notice %></p>
-
-<p>
-  <b>Heading:</b>
-  <%= @content_block.heading %>
-</p>
+<h2 style="color: #60855c">View Content</h2>
+<h3>Section: <%= @content_block.section.long_name %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Position in Section: <%= @content_block.position %>)</h3>
 <p>
   <b>Content:</b>
   <%= raw(@content_block.content) %>
 </p>
 
 <p>
-  <b>Section:</b>
-  <%= @content_block.section_id %>
-</p>
-<p>
-  <b>Position:</b>
-  <%= @content_block.position %>
-</p>
-  <b>ID:</b>
-  <%= @content_block.id %>
-</p>
 
-
-<%= link_to 'Edit', edit_content_block_path(@content_block) %> |
-<%= link_to 'Back to Section', admin_back_path(:section_id => @content_block.section_id) %>
+</div>

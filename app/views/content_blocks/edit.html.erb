@@ -1,8 +1,6 @@
 <div id="mainContent">
 <h2>Editing Content Block 
 <h3>Section: <%= @content_block.section.name %>, Position: <%= @content_block.position %></h3>
-<%= link_to 'View Editing History', admin_history_path(:section_id => @content_block.section_id, :position => @content_block.position) %> |
-<%= link_to 'Back to Section', admin_back_path(:section_id => @content_block.section_id) %>
 <p>
 <%= render 'form', :locals => { :who => current_user}
  %>

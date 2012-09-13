@@ -5,6 +5,12 @@ class ContentBlocksController < ApplicationController
   end
 
   # GET /content_blocks/1
+  def history
+    @content_block = ContentBlock.find(params[:id])
+    @versions = @content_block.versions.order("created_at DESC")
+  end
+  
+  # GET /content_blocks/1
   def show
     @content_block = ContentBlock.find(params[:id])
   end
@@ -14,57 +20,47 @@ class ContentBlocksController < ApplicationController
     @content_block = ContentBlock.new
     @content_block.section_id = params[:section_id]
     @content_block.user_id = current_user.id
+    @content_block.editor_accessible = FALSE
     current_max = Section.find_by_id(3).content_blocks.max_by(&:position)
-    @content_block.position = current_max.position + 1
+    if current_max.nil?
+      @content_block.position = 1
+    else
+      @content_block.position = current_max.position + 1
+    end
   end
 
   # GET /content_blocks/1/edit
   def edit
-    @content_block = ContentBlock.find(params[:id]).dup
+    @content_block = ContentBlock.find(params[:id])
     @content_block.user_id = current_user.id
   end
 
   # POST /content_blocks
-  # POST /content_blocks.json
   def create
     @content_block = ContentBlock.new(params[:content_block])
 
     respond_to do |format|
       if @content_block.save
-        format.html { redirect_to @content_block, notice: 'Content block was successfully created.' }
-        format.json { render json: @content_block, status: :created, location: @content_block }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @content_block.errors, status: :unprocessable_entity }
+        redirect_to @content_block, notice: 'Content block was successfully created.' 
+         render "new" 
       end
     end
   end
 
   # PUT /content_blocks/1
-  # PUT /content_blocks/1.json
   def update
     @content_block = ContentBlock.find(params[:id])
-
-    respond_to do |format|
       if @content_block.update_attributes(params[:content_block])
-        format.html { redirect_to @content_block, notice: 'Content block was successfully updated.' }
-        format.json { head :no_content }
+        redirect_to @content_block, notice: 'Content block was successfully updated.' 
       else
-        format.html { render action: "edit" }
-        format.json { render json: @content_block.errors, status: :unprocessable_entity }
+        render "edit" 
       end
-    end
   end
 
   # DELETE /content_blocks/1
-  # DELETE /content_blocks/1.json
   def destroy
     @content_block = ContentBlock.find(params[:id])
     @content_block.destroy
-
-    respond_to do |format|
-      format.html { redirect_to content_blocks_url }
-      format.json { head :no_content }
-    end
+    redirect_to content_blocks_url 
   end
 end

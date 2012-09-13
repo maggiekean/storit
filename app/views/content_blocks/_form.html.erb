@@ -1,6 +1,5 @@
 <%= semantic_form_for @content_block do |f| %>
   <% if @content_block.errors.any? %>
-
     <div id="error_explanation">
       <h2><%= pluralize(@content_block.errors.count, "error") %> prohibited this content_block from being saved:</h2>
 
@@ -12,6 +11,7 @@
     </div>
   <% end %>
 <%= f.inputs do %>
+	<%= f.input :section_id, :as => :select, :collection => Section.all %>
 	<%= f.input :heading, :input_html => { :size => 80 } %>
 	<%= f.input :user_id,   :as => :select, :label => 'Person Making Changes:',     :collection => User.all, :include_blank => 'Who are you?'%>
 	<div style="margin-left: 150px;">

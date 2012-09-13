@@ -6,6 +6,7 @@ gem "paperclip"
 gem 'formtastic'
 gem 'bcrypt-ruby', '3.0.1'
 gem 'acts_as_list'
+gem 'paper_trail', '~> 2'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

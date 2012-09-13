@@ -538,10 +538,12 @@ z-index: 2000;
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3 { page-break-after: avoid; }
 }
-
+.even { background: #eeeeee; }
+.odd { background: none; }
 .image_left { float: left; 	margin: 0 30px 10px 0; z-index: 100; background-color: #ffffff; }
 .image_right { float: right; 	margin: 0 0px 10px 10px; z-index: 100; background-color: #ffffff;}
 .editable { background-color: #e6ffe6;}
+.edited { background-color: #e6ffe6;}
 @import "layout.css";
 @import "animation.css";
 @import "dropdown.css";

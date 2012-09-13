@@ -1,12 +1,28 @@
 Storit::Application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'  
-  resources :sections
+  resources :sections do
+  end
 
   resources :applications
 
-  resources :content_blocks
-
+  resources :content_blocks do
+    member do
+      get 'history'
+    end
+  end
   resources :users
+  
+  resources :editable_pages do
+    collection do
+      get 'content_block_history'
+      get 'ip_overview'
+      get 'ip_overview_sort'
+    end
+  end
+  resources :editable_pages do
+    post :ip_sort, on: :collection
+  end
+
   resources :sessions, only: [:new, :create, :destroy]
   match '/home', to: 'public_pages#home'
   match '/contact', to: 'public_pages#contact'
@@ -19,13 +35,11 @@ Storit::Application.routes.draw do
   match '/wipo', to: 'public_pages#wipo'
   match '/wto-trips', to: 'public_pages#wto-trips'
   match '/cbd', to: 'public_pages#cbd'
-  match '/admin/ip', to: 'editable_pages#ip_overview'
-  match '/admin/history', to: 'editable_pages#content_block_history'
-  match '/admin/back', to: 'editable_pages#back'
   match '/signup',  to: 'users#new'
   match '/signup',  to: 'users#new'
   match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy'
+  match '/admin/ip', to: 'editable_pages#ip_overview'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

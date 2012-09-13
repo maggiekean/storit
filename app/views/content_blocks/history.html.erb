@@ -1,0 +1,36 @@
+<div id="mainContent">
+<p id="notice"><%= notice %></p>
+<h2 style="color: #60855c">View Content & History</h2>
+<h3>Section: <%= @content_block.section.long_name %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Position in Section: <%= @content_block.position %>)</h3>
+<p>
+  <b>Content:</b>
+  <%= raw(@content_block.content) %>
+</p>
+
+<p>
+
+<% if  @content_block.versions.count == 0 %>
+<h2 style="color: #60855c">No previous versions.</h2>
+<% else %>
+	<h2 style="color: #60855c">Version History:</h2>
+	<% @versions.each do | version | %>
+	<div class="<%= cycle('odd', 'even') %>" style="padding: 10px; border-top: 1px solid #333333">
+	Version <%= version.id %> -- created on <%= version.created_at.strftime("%d %b %y at %H:%M")  %> by <%= User.find_by_id(version.whodunnit).name %>	
+			 <% version.changeset.each do |key, value| %>
+				<h3>Changes to <%= key.capitalize %></h3>
+				<% case key %>
+				<% when "content" %>
+					<%= raw(value[0]) %>
+					<%= raw(value[1]) %><p>
+				<% when "position" %>
+					from position <%= value[0] %> to position <%= value[1] %>
+				<% else %>
+					<%= value[0] %><p>
+					<%= value[1] %><p>
+				<% end %>
+			<% end %>	</div>
+	<% end %>
+
+<% end %>
+</div>
+
