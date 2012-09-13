@@ -21,7 +21,7 @@ class ContentBlocksController < ApplicationController
     @content_block.section_id = params[:section_id]
     @content_block.user_id = current_user.id
     @content_block.editor_accessible = FALSE
-    current_max = Section.find_by_id(3).content_blocks.max_by(&:position)
+    current_max = Section.find_by_id(:section_id).content_blocks.max_by(&:position)
     if current_max.nil?
       @content_block.position = 1
     else
