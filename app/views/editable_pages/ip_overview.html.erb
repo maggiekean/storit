@@ -37,7 +37,7 @@
 		  
 		  </ol>
 		 </div>
-<%= link_to "Add content", new_content_block_path(@content_block, :section_id => "3") %> 
+<%= link_to "Add content", new_content_block_path(@content_block, :section_id => @section.id) %> 
 </div> <!-- #mainContent -->
 
 <% content_for :javascript do %>	  

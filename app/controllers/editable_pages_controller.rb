@@ -22,10 +22,6 @@ class EditablePagesController < ApplicationController
   end
   
   def back
-    if (params[:section_id] == "3")
-      redirect_to admin_ip_path
-    else
-      puts "something went wrong"
-    end
+   render :nothing => true
   end
 end
