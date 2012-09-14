@@ -371,13 +371,20 @@ footer {
 	padding: 20px 0;
 	margin: 0;
 }
+#admin-menu-container {
+	height: 152px;
+	margin-bottom: 10px;	
+	width: 100%;
+	background:url(/assets/admin-logobar.jpg) no-repeat;
+	position: relative;
+}
 
 
 #menu-container {
 	height: 152px;
 	margin-bottom: 10px;	
 	width: 100%;
-	background:url(../images/logobar.jpg) no-repeat;
+	background:url(/assets/logobar.jpg) no-repeat;
 	position: relative;
 }
 
@@ -403,7 +410,15 @@ footer {
 	background-repeat:repeat-y;
 	width:100%;
 }
-
+.show_hide_icon{
+display:inline; 
+border: 1px solid #60835b; 
+border-radius: 5px; 
+margin-right: 5px; 
+margin-bottom: -3px;
+padding-right: 2px;
+padding-bottom: 2px;
+}
 #bgIcon, #actIcon, #membersIcon, #boardIcon, #staffIcon, #footnotesIcon, #instIcon, #histIcon, #provisionsIcon, #originIcon, #readmoreIcon {
 	display:inline-block; 
 	border: 1px solid #60835b; 
@@ -544,6 +559,7 @@ z-index: 2000;
 .image_right { float: right; 	margin: 0 0px 10px 10px; z-index: 100; background-color: #ffffff;}
 .editable { background-color: #e6ffe6;}
 .edited { background-color: #e6ffe6;}
+.alert { margin-top: 50px; background-color: #fefedd; border: 1px solid #fcfcb5; text-align: middle;}
 @import "layout.css";
 @import "animation.css";
 @import "dropdown.css";

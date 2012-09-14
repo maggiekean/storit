@@ -12,13 +12,25 @@ Storit::Application.routes.draw do
   end
   resources :users
   
+  resources :public_pages do
+    collection do
+      get 'about'
+    end
+  end
+  
   resources :editable_pages do
     collection do
       get 'content_block_history'
       get 'ip_overview'
       get 'ip_overview_sort'
+      get 'view_editable_content'
+    end
+    member do
+      get 'edit_section_contents'
+      get 'section_overview'
     end
   end
+  
   resources :editable_pages do
     post :ip_sort, on: :collection
   end
@@ -40,6 +52,8 @@ Storit::Application.routes.draw do
   match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy'
   match '/admin/ip', to: 'editable_pages#ip_overview'
+  match '/edit', to: 'editable_pages#view_editable_content'
+  root to: 'public_pages#home'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -1,67 +1,3 @@
-<% content_for :javascript do %>	  
-<script>
-$(document).ready(function() {
-
-    if("<%= upovSection %>"  == "historical") {
-	}
-	else  {
-		if("<%= upovSection %>"  == "origins") {
-			document.getElementById('history').style.display = 'none'; 
-		    document.getElementById('origins').style.display = 'block'; 
-			$( '#histIcon').removeClass("ui-icon-minusthick").addClass("ui-icon-plusthick");	
-			$( '#originIcon').removeClass("ui-icon-plusthick").addClass("ui-icon-minusthick");
-		}
-		else  {
-			if("<%= upovSection %>"  == "provisions") {
-				document.getElementById('history').style.display = 'none'; 
-				document.getElementById('provisions').style.display = 'block'; 
-				$( '#histIcon').removeClass("ui-icon-minusthick").addClass("ui-icon-plusthick");	
-				$( '#provisionsIcon').removeClass("ui-icon-plusthick").addClass("ui-icon-minusthick");
-			}
-			else  {
-				if("<%= upovSection %>"  == "infrastructure") {
-					document.getElementById('history').style.display = 'none'; 
-					document.getElementById('infrastructure').style.display = 'block'; 
-					$( '#histIcon').removeClass("ui-icon-minusthick").addClass("ui-icon-plusthick");	
-					$( '#instIcon').removeClass("ui-icon-plusthick").addClass("ui-icon-minusthick");
-				}
-				
-			}
-		}
-	}
-});
-
-$(document).ready(function() {	
-	
-		$( '#histIcon').click(function() {
-		  	$( '#history').toggle('blind');
-		 	$( '#histIcon').toggleClass('ui-icon-minusthick');
-			$( '#histIcon').toggleClass('ui-icon-plusthick');
-		});
-		$( '#originIcon').click(function() {
-		  	$('#origins').toggle('blind');
-		 	$( '#originIcon').toggleClass('ui-icon-minusthick');
-			$( '#originIcon').toggleClass('ui-icon-plusthick');		      
-		});
-		$( '#footnotesIcon').click(function() {
-		  	$( '#footnotes').toggle('blind');
-		 	$( '#footnotesIcon').toggleClass('ui-icon-minusthick');
-			$( '#footnotesIcon').toggleClass('ui-icon-plusthick');			      
-		});
-		$( '#provisionsIcon').click(function() {
-		  	$( '#provisions').toggle('blind');
-		 	$( '#provisionsIcon').toggleClass('ui-icon-minusthick');
-			$( '#provisionsIcon').toggleClass('ui-icon-plusthick');			      
-		});
-		$( '#instIcon').click(function() {
-		  	$( '#infrastructure').toggle('blind');
-		 	$( '#instIcon').toggleClass('ui-icon-minusthick');
-			$( '#instIcon').toggleClass('ui-icon-plusthick');			      
-		});
-		$("[rel=footnote]").inlineFootnote();	
-	});
-	</script>
-<% end %>
 <div id="mainContent">
 	<div id="upovContent" >
 		<img src="images/policy.jpg">
@@ -259,3 +195,67 @@ $(document).ready(function() {
 			
 	</div><!-- #aboutContent -->
 </div> <!-- #mainContent -->
+<% content_for :javascript do %>	  
+<script>
+$(document).ready(function() {
+
+    if("<%= upovSection %>"  == "historical") {
+	}
+	else  {
+		if("<%= upovSection %>"  == "origins") {
+			document.getElementById('history').style.display = 'none'; 
+		    document.getElementById('origins').style.display = 'block'; 
+			$( '#histIcon').removeClass("ui-icon-minusthick").addClass("ui-icon-plusthick");	
+			$( '#originIcon').removeClass("ui-icon-plusthick").addClass("ui-icon-minusthick");
+		}
+		else  {
+			if("<%= upovSection %>"  == "provisions") {
+				document.getElementById('history').style.display = 'none'; 
+				document.getElementById('provisions').style.display = 'block'; 
+				$( '#histIcon').removeClass("ui-icon-minusthick").addClass("ui-icon-plusthick");	
+				$( '#provisionsIcon').removeClass("ui-icon-plusthick").addClass("ui-icon-minusthick");
+			}
+			else  {
+				if("<%= upovSection %>"  == "infrastructure") {
+					document.getElementById('history').style.display = 'none'; 
+					document.getElementById('infrastructure').style.display = 'block'; 
+					$( '#histIcon').removeClass("ui-icon-minusthick").addClass("ui-icon-plusthick");	
+					$( '#instIcon').removeClass("ui-icon-plusthick").addClass("ui-icon-minusthick");
+				}
+				
+			}
+		}
+	}
+});
+
+$(document).ready(function() {	
+	
+		$( '#histIcon').click(function() {
+		  	$( '#history').toggle('blind');
+		 	$( '#histIcon').toggleClass('ui-icon-minusthick');
+			$( '#histIcon').toggleClass('ui-icon-plusthick');
+		});
+		$( '#originIcon').click(function() {
+		  	$('#origins').toggle('blind');
+		 	$( '#originIcon').toggleClass('ui-icon-minusthick');
+			$( '#originIcon').toggleClass('ui-icon-plusthick');		      
+		});
+		$( '#footnotesIcon').click(function() {
+		  	$( '#footnotes').toggle('blind');
+		 	$( '#footnotesIcon').toggleClass('ui-icon-minusthick');
+			$( '#footnotesIcon').toggleClass('ui-icon-plusthick');			      
+		});
+		$( '#provisionsIcon').click(function() {
+		  	$( '#provisions').toggle('blind');
+		 	$( '#provisionsIcon').toggleClass('ui-icon-minusthick');
+			$( '#provisionsIcon').toggleClass('ui-icon-plusthick');			      
+		});
+		$( '#instIcon').click(function() {
+		  	$( '#infrastructure').toggle('blind');
+		 	$( '#instIcon').toggleClass('ui-icon-minusthick');
+			$( '#instIcon').toggleClass('ui-icon-plusthick');			      
+		});
+		$("[rel=footnote]").inlineFootnote();	
+	});
+	</script>
+<% end %>

@@ -1,0 +1,24 @@
+
+
+<div id="page1h">
+
+				<div class="indent">
+				 <div class="row-1 line-hor txt2" ></div>
+					<div class="row-2">
+						<div class="wrapper line-ver">	
+							<div class="col-1">
+								To edit this info, go to home_info (link)
+					 		</div>
+							<div class="col-2" >
+								<h2>News </h2>
+								<ul class="news-list">
+									<%= render 'shared/get_content' %>	
+								</ul>
+								<%= link_to "Add content", new_content_block_path(:section_id => @section.id) %> 
+							</div> <!-- col-2 -->
+						</div> <!-- wrapper -->
+					</div><!-- row-2 -->
+					</div> <!-- indent -->
+				</div> <!-- #mainContent -->
+
+</div>

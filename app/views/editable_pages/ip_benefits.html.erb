@@ -1,0 +1,44 @@
+<div id="page2b">
+<div id="mainContent">
+	<div id="IPContent">
+		<div class="indent">
+			<div class="row-2 ">
+				 <h2>Who Benefits from Plant Variety Protection?</h2>
+				 <div class="wrapper">
+					<div class="col-1"><br>
+								<%= render 'shared/get_content' %>	
+						 </div>
+						<div class="col-2" style="margin-top: 50px;">
+							<div id="pvpDiagramON" style="width: 535px; height: 483px; z-index:10; position: absolute; padding: 0px; margin: 0px; ">
+								<img src="/assets/pvp-on.jpg">
+							</div>
+							<div id="pvpDiagramOFF" style="width: 535px; height: 483px; z-index:100; position: absolute; padding: 0px; margin: 0px;" >
+								<img src="/assets/pvp-off.jpg"></div>
+							</div>
+								<div id="pvpCaptionON" style="margin-top: 540px; margin-left: 620px; z-index:10; position: absolute; display: none;"><a href="#">Click to see PVP Today</a></div>
+								<div id="pvpCaptionOFF" style="margin-top: 400px; margin-left: 600px; z-index:100; position: absolute; "><a href="#">Click to see PVP with Changes</a></div>
+							</div>
+					</div>
+				</div>
+			</div>	   
+		</div>	
+	</div>	
+	<%= link_to "Add content", new_content_block_path(:section_id => @section.id) %> 
+</div>
+<% content_for :javascript do %>	  
+<script>
+$(document).ready(function() {
+		$("[rel=footnote]").inlineFootnote();
+		$( '#pvpCaptionON').click(function() {
+				$( '#pvpDiagramOFF').toggle('blind');
+				$( '#pvpCaptionOFF').toggle('fade');
+				$( '#pvpCaptionON').toggle('fade');	
+			});
+		$( '#pvpCaptionOFF').click(function() {
+				$( '#pvpDiagramOFF').toggle('blind');
+				$( '#pvpCaptionOFF').toggle('fade');
+				$( '#pvpCaptionON').toggle('fade');	
+			});
+	});
+</script>
+<% end %>

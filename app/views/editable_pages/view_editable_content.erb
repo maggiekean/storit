@@ -1,0 +1,42 @@
+<div id="mainContent">
+<h1 style="margin-top:50px; ">Editable Content</h1>
+
+<ul style="list-style-type: none;">
+<% @sections.each do |s| %>
+	<li style="position: relative; left: 25px; top: 0px; "><%= link_to s.long_name, section_overview_editable_page_path(s) %>
+	<% if s.content_blocks.count > 0 %> 
+		<div class="show_hide_icon ui-icon ui-icon-plusthick " style="position: relative; left: -30px; top: -22px; " ></div>
+	<% else %>
+	<div style="line-height: 15px;" >&nbsp;</div>
+	<% end %>	
+	<div class="details" style="display: none">
+		<% if s.content_blocks.count > 0 %> 
+		Content Blocks:<p>
+			<ul  >
+				<% s.content_blocks.each do |c| %>
+					<li> 
+						<% if c.heading != "" %>
+							<%= link_to "Block #{c.position}: #{c.heading}", edit_content_block_path(c) %>
+						<% 	else %>
+							<%= link_to  "Block #{c.position} (No Heading)", edit_content_block_path(c) %>
+						<% end %>
+					</li>	
+				<% end %>
+			</ul>
+		<% end %>
+	</div></li>
+<% end %>
+</ul>
+</div>
+	<% content_for :javascript do %>	  
+	<script>
+	$(document).ready(function() {
+	
+			$( '.ui-icon').click(function() {
+			  	$(this).next().toggle('blind');
+			 	$(this).toggleClass('ui-icon-minusthick');
+				$(this).toggleClass('ui-icon-plusthick');
+			});
+		});
+	</script>
+	<% end %>

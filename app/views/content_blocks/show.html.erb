@@ -1,7 +1,6 @@
 <div id="mainContent">
-<p id="notice"><%= notice %></p>
 <h2 style="color: #60855c">View Content</h2>
-<h3>Section: <%= @content_block.section.long_name %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Position in Section: <%= @content_block.position %>)</h3>
+<h3>Section: <%= @content_block.section.long_name %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Position in Section: <%= @content_block.position %>) &nbsp;&nbsp;&nbsp;<%= link_to "Edit Content", edit_content_block_path(@content_block) %> </h3>
 <p>
   <b>Content:</b>
   <%= raw(@content_block.content) %>

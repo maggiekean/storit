@@ -1,0 +1,29 @@
+<div id="mainContent">
+	<div id="upovContent" >
+		<img src="/assets/policy.jpg">
+		<h1 style="margin-top: 20px;">The Convention for the Protection of New Varieties of Plants (UPOV)</h1>
+		<div id="provisions" >
+			<%= render 'shared/get_content' %>		
+		</div>
+		<div class="subtopicHeading" >Footnotes
+			
+				</div>
+				<p>	<%= link_to "Add content", new_content_block_path(:section_id => @section.id) %> 		
+		<div id="footnotes" >
+			<div class="footnotes">
+			 <hr>
+			<ol start="8">
+				<li id="fn:8">
+				    <p>
+				     The texts of the various UPOV treaties can be found <a href="http://www.upov.int/upovlex/en/acts.html">here</a>
+		 </p><a href="#fnref:8" rev="footnote">↩</a>		   
+				   </li>
+				<li id="fn:9">
+				    <p>The term "essentially derived" is not defined but was intended to halt the process of cosmetic breeding whereby one or two easy and unimportant characteristics were changed and protection sought for a new variety.  Reinforced by advances in technology which make smaller differences between varieties achievable and detectable, the trend has been toward a narrowing of permissible distinctions between varieties.  The criterion of distinctiveness is likely to be similarly affected.</p>
+		 			<a href="#fnref:9" rev="footnote">↩</a>
+				   </li>
+				</ol>
+				</div>
+	</div><!-- #aboutContent -->
+
+</div> <!-- #mainContent -->

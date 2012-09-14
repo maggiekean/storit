@@ -7,7 +7,7 @@ class ContentBlocksController < ApplicationController
   # GET /content_blocks/1
   def history
     @content_block = ContentBlock.find(params[:id])
-    @versions = @content_block.versions.order("created_at DESC")
+    @versions = @content_block.versions.order(:id).reverse_order
   end
   
   # GET /content_blocks/1
@@ -38,21 +38,18 @@ class ContentBlocksController < ApplicationController
   # POST /content_blocks
   def create
     @content_block = ContentBlock.new(params[:content_block])
-
-    respond_to do |format|
       if @content_block.save
         redirect_to @content_block, notice: 'Content block was successfully created.' 
       else
          render "new" 
       end
-    end
   end
 
   # PUT /content_blocks/1
   def update
     @content_block = ContentBlock.find(params[:id])
       if @content_block.update_attributes(params[:content_block])
-        redirect_to @content_block, notice: 'Content block was successfully updated.' 
+        redirect_to history_content_block_path(@content_block), notice: 'Content block was successfully updated.' 
       else
         render "edit" 
       end

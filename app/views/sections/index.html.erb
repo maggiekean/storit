@@ -4,14 +4,14 @@
 <table>
   <tr>
     <th>Name</th>
-    <th></th>
+    </th>
     <th></th>
     <th></th>
   </tr>
 
 <% @sections.each do |section| %>
   <tr>
-    <td><%= section.name %></td>
+    <td><%= section.long_name %></td>
     <td><%= link_to 'Show', section %> &nbsp;|&nbsp;</td>
     <td><%= link_to 'Edit', edit_section_path(section) %> &nbsp;|&nbsp;</td>
     <td><%= link_to 'Destroy', section, method: :delete, data: { confirm: 'Are you sure?' } %></td>

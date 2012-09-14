@@ -6,22 +6,7 @@
 	    	<div class="wrapper">
 	     	<%= image_tag("sec-woman.png", :class => "image_left") %>
 	      <h2>New and improved plant varieties are one way of achieving better yields and adaptability to global change, both of which are important to food security.</h2>
-			<% if (@content_blocks)  %>
-				<% @content_blocks.each do |c| %>
-						<% if  c.editor_accessible %>
-							<div class="editable">			
-						<% end %>
-						<h3><%= c.heading %></h3>	
-						<%= c.position %>
-						<%= raw(c.content) %>
-						<% if  c.editor_accessible %>
-							<%= link_to image_tag("/assets/pencil.png", :title => "Edit"), edit_content_block_path(c) %>
-							<%= link_to image_tag("/assets/magnify.png", :title => "Closer Look"), content_block_path(c) %>
-							<%= link_to image_tag("/assets/history.png", :title => "View Editing History"), content_block_path(c), :history => TRUE %>
-							</div>
-						<% end %>
-				<% end %>
-			<% end %>
+			<%= render 'shared/get_content' %>	
 </div>
 	    </div>
 		<div class="footnotes">
@@ -37,7 +22,7 @@
 		  
 		  </ol>
 		 </div>
-<%= link_to "Add content", new_content_block_path(@content_block, :section_id => @section.id) %> 
+<%= link_to "Add content", new_content_block_path(:section_id => @section.id) %> 
 </div> <!-- #mainContent -->
 
 <% content_for :javascript do %>	  

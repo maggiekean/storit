@@ -1,0 +1,16 @@
+<% if (@content_blocks)  %>
+	<% @content_blocks.each do |c| %>
+			<% if  c.editor_accessible %>
+				<div class="editable">			
+			<% end %>
+			<h2><%= c.heading %></h2>	
+			<%= c.position %>
+			<%= raw(c.content) %>
+			<% if  c.editor_accessible %>
+				<%= link_to image_tag("/assets/pencil.png", :title => "Edit"), edit_content_block_path(c) %>
+				<%= link_to image_tag("/assets/magnify.png", :title => "Closer Look"), content_block_path(c) %>
+				<%= link_to image_tag("/assets/history.png", :title => "View Editing History"), history_content_block_path(c) %>
+				</div>
+			<% end %>
+	<% end %>
+<% end %>

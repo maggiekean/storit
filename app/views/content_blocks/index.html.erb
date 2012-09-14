@@ -2,10 +2,8 @@
 <h1>Listing content_blocks</h1>
 
 <% @content_blocks.each do |content_block| %>
-<% if  content_block.heading != "IMAGE" %> 
-<h3><%= content_block.heading %></h3>
-<% end %>
-<h3>Section: <%= content_block.section.name %>, Position: <%= content_block.position %>,  ID <%= content_block.id %>, Edited by: <%= content_block.user.name %></h3>
+	<h3><%= content_block.heading %></h3>
+	<h3>Section: <%= content_block.section.name %>, Position: <%= content_block.position %>,  ID <%= content_block.id %>, Edited by: <%= content_block.user.name %></h3>
 <% if content_block.editor_accessible %> Block is editable.
 <% end %>
 <%= raw(content_block.content) %><p>
