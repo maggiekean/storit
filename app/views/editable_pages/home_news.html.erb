@@ -7,14 +7,14 @@
 					<div class="row-2">
 						<div class="wrapper line-ver">	
 							<div class="col-1">
-								To edit this info, go to home_info (link)
+	To Edit this info, go to	<%= link_to Section.find_by_name("home_info").long_name, section_overview_editable_page_path(Section.find_by_name("home_info")) %>
 					 		</div>
 							<div class="col-2" >
 								<h2>News </h2>
 								<ul class="news-list">
 									<%= render 'shared/get_content' %>	
 								</ul>
-								<%= link_to "Add content", new_content_block_path(:section_id => @section.id) %> 
+							
 							</div> <!-- col-2 -->
 						</div> <!-- wrapper -->
 					</div><!-- row-2 -->

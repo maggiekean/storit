@@ -12,10 +12,9 @@
 								<ul class="img-list">
 			<%= render 'shared/get_content' %>	
 					         	</ul>
-<%= link_to "Add content", new_content_block_path(:section_id => @section.id) %> 
 					 		</div>
 <div class="col-2">
-	To Edit this info, go to home_news (link)
+	To Edit this info, go to	<%= link_to Section.find_by_name("home_news").long_name, section_overview_editable_page_path(Section.find_by_name("home_news")) %>
 						</div> <!-- wrapper -->
 					</div><!-- row-2 -->
 					</div> <!-- indent -->
