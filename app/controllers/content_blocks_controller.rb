@@ -58,7 +58,9 @@ class ContentBlocksController < ApplicationController
   # DELETE /content_blocks/1
   def destroy
     @content_block = ContentBlock.find(params[:id])
+    @section = Section.find_by_id(@content_block.section_id)
+    puts "Section is #{@section.id}"
     @content_block.destroy
-    redirect_to content_blocks_url 
+    redirect_to section_overview_editable_page_path(@section.id)
   end
 end

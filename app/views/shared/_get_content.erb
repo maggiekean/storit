@@ -8,8 +8,9 @@
 			<%= raw(c.content) %>
 			<% if  c.editor_accessible %>
 				<%= link_to image_tag("/assets/pencil.png", :title => "Edit"), edit_content_block_path(c) %>
-				<%= link_to image_tag("/assets/magnify.png", :title => "Closer Look"), content_block_path(c) %>
 				<%= link_to image_tag("/assets/history.png", :title => "View Editing History"), history_content_block_path(c) %>
+<%= link_to image_tag("/assets/delete.png"), c, :method => :delete, data: { confirm: 'Are you sure?' } %><p>
+				
 				</div>
 			<% end %>
 	<% end %>
