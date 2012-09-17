@@ -1,9 +1,9 @@
 	<div id="mainContent" style="padding-top: 50px;">
 		<h2>Frequently Asked Questions</h2>
 <% if (@content_blocks)  %>
-	<% @content_blocks.each do |c| %><li>
+	<% @content_blocks.each do |c| %>
 			<h3><%= c.heading %></h3>	
-			<%= raw(c.content) %></li>
+			<%= raw(c.content) %>
 	<% end %>
 <% end %>
 </div>

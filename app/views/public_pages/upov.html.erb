@@ -14,9 +14,9 @@
 		<span id="historyIcon" class="ui-icon ui-icon-plusthick" ></span>
 			<div id="history" style = "display: none"  >
 		<% end %>
-			<% @content_blocks_history.each do |c| %><li>
+			<% @content_blocks_history.each do |c| %>
 					<h3><%= c.heading %></h3>	
-					<%= raw(c.content) %></li>
+					<%= raw(c.content) %>
 			<% end %>	
 		</div><!-- #historical context -->
 		<div class="subtopicHeading" >Origins		</div>
@@ -27,10 +27,9 @@
 			<span id="originIcon" class="ui-icon ui-icon-plusthick"></span>
 			<div id="origins" style = "display: none">
 		<% end %>
-			stuff
-			<% @content_blocks_origins.each do |c| %><li>
+			<% @content_blocks_origins.each do |c| %>
 					<h3><%= c.heading %></h3>	
-					<%= raw(c.content) %></li>
+					<%= raw(c.content) %>
 			<% end %>
 		</div><!-- #origins -->
 		<div class="subtopicHeading" >Main Provisions		</div>
@@ -41,9 +40,9 @@
 			<span id="provisionsIcon" class="ui-icon ui-icon-plusthick"></span>
 		<div id="provisions" style = "display: none" >
 		<% end %>
-			<% @content_blocks_provisions.each do |c| %><li>
+			<% @content_blocks_provisions.each do |c| %>
 					<h3><%= c.heading %></h3>	
-					<%= raw(c.content) %></li>
+					<%= raw(c.content) %>
 			<% end %>
 		</div>
 		<div class="subtopicHeading" >Infrastructure		</div>
@@ -54,9 +53,9 @@
 			<span id="infrastructureIcon" class="ui-icon ui-icon-plusthick"></span>
 		<div id="infrastructure" style = "display: none">
 			<%  end %>
-			<% @content_blocks_infrastructure.each do |c| %><li>
+			<% @content_blocks_infrastructure.each do |c| %>
 					<h3><%= c.heading %></h3>	
-					<%= raw(c.content) %></li>
+					<%= raw(c.content) %>
 			<% end %>
 		</div>
 			

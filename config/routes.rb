@@ -46,6 +46,8 @@ resources :public_pages do
 
   resources :sessions, only: [:new, :create, :destroy]
   resources :public_pages, only: [:serve_page, :upov, :about, :pvp, :contact, :home]
+  match '/ip_overview', to: '/public_pages/ip_overview/serve_page'
+  match '/ip_benefits', to: '/public_pages/ip_benefits/serve_page'
   match '/signup',  to: 'users#new'
   match '/signup',  to: 'users#new'
   match '/signin',  to: 'sessions#new'
