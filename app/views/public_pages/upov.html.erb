@@ -17,10 +17,26 @@
 			The private sector’s interest is in markets or potential markets. Most developing countries are agriculture-based economies where smallholder farming accounts for about 75 percent of agricultural production and over 75% of employment. Half the food today is produced by 1.5 million farmers on small plots of land where uniform varieties and external input packages are unlikely to ever be sustainable. In these areas farm-based seed development is critical to resiliency. Farmers’ varieties[define and link to section of the website on the importance of diversity] are selected for a range of traits and help ensure that some crops will grow even in the face of unexpected environmental or other change [cite to Carlo Fadda on pests and disease and diversity in Uganda) In addition, on-farm diversity is a major and direct contributor to the nutrition and health of the community and offers economic and social opportunities that contribute to livelihoods and maintenance of social and cultural values. The differences in farming systems globally are important to note, not as a means to devalue the role of intellectual property as an incentive system, but as a means to understand more precisely what it does, can and is not designed to do. The market and the private sector may provide some tools to achieve the objective of food security, but alone, they cannot fully satisfy the objective. To meet the challenges of rapid global change, food security and poverty alleviation, we need a more inclusive approach that recognizes the strengths and limitations of various sectors and how we come together more effectively.
 			</p>
 
+<<<<<<< HEAD
 			
+=======
+		<div class="subtopicHeading">Historical Context</div>
+		<% if @open_section == "history" %>
+			<span id="historyIcon" class="ui-icon ui-icon-minusthick" ></span>
+		<div id="history" >
+		<% else %>
+		<span id="historyIcon" class="ui-icon ui-icon-plusthick" ></span>
+			<div id="history" style = "display: none"  >
+		<% end %>
+			<% @content_blocks_history.each do |c| %>
+					<h3><%= c.heading %></h3>	
+					<%= raw(c.content) %>
+			<% end %>	
+>>>>>>> cf9acda12473e1ed0ac469d6c2484a2c14041fd5
 		</div><!-- #historical context -->
 		<div class="subtopicHeading" >The origins of UPOV
 			<span id="originIcon" class="ui-icon ui-icon-plusthick"></span>
+<<<<<<< HEAD
 			</div>
 		</div>
 		<div id="origins" style="display: none;">
@@ -35,9 +51,18 @@
 
 		
 			
+=======
+			<div id="origins" style = "display: none">
+		<% end %>
+			<% @content_blocks_origins.each do |c| %>
+					<h3><%= c.heading %></h3>	
+					<%= raw(c.content) %>
+			<% end %>
+>>>>>>> cf9acda12473e1ed0ac469d6c2484a2c14041fd5
 		</div><!-- #origins -->
 		<div class="subtopicHeading" >Main provisions of UPOV<sup id="fnref:8"><a href="#fn:8" rel="footnote">8</a>
 			<span id="provisionsIcon" class="ui-icon ui-icon-plusthick"></span>
+<<<<<<< HEAD
 			</div>
 		<div id="provisions" style="display: none;">
 				<p>
@@ -82,6 +107,27 @@
 				It is often argued that it is messy or too complicated to develop international innovation policy that is supportive the heterogeneous, agro-ecosystems where no single agro-ecosystem dominates the landscape. It is important to note that the international policy system in place to support the mainstream global crop improvement system<sup id="fnref:16"><a href="#fn:16" rel="footnote">16</a></sup> is a complex legal and institutional infrastructure that is not cheap to administer &mdash; the UPOV budget for the 2012-2013 Biennium is US$ 7,596,960 (7,238,000 Swiss Francs)<sup id="fnref:17"><a href="#fn:17" rel="footnote">17</a></sup> &mdash; in addition to being consistently negotiated, discussed and interpreted. 
 
 				</p>
+=======
+		<div id="provisions" style = "display: none" >
+		<% end %>
+			<% @content_blocks_provisions.each do |c| %>
+					<h3><%= c.heading %></h3>	
+					<%= raw(c.content) %>
+			<% end %>
+		</div>
+		<div class="subtopicHeading" >Infrastructure		</div>
+		<% if @open_section == "infrastructure" %>
+			<span id="infrastructureIcon" class="ui-icon ui-icon-minusthick"></span>
+			<div id="infrastructure">
+		<% else %>
+			<span id="infrastructureIcon" class="ui-icon ui-icon-plusthick"></span>
+		<div id="infrastructure" style = "display: none">
+			<%  end %>
+			<% @content_blocks_infrastructure.each do |c| %>
+					<h3><%= c.heading %></h3>	
+					<%= raw(c.content) %>
+			<% end %>
+>>>>>>> cf9acda12473e1ed0ac469d6c2484a2c14041fd5
 		</div>
 		<div class="subtopicHeading" >Footnotes
 				<span id="footnotesIcon" class="ui-icon ui-icon-plusthick"></span>

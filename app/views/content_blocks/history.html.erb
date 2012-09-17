@@ -12,7 +12,7 @@
 <% if  @content_block.versions.count == 0 %>
 <h2 style="color: #60855c">No previous versions.</h2>
 <% else %>
-	<h2 style="color: #60855c">Version History:</h2>
+<p>	<h2 style="color: #60855c">Version History:</h2>
 	<% @versions.each do | version | %>
 	<div class="<%= cycle('odd', 'even') %>" style="padding: 10px; border-top: 1px solid #333333">
 	Version ID <%= version.id %> -- created on <%= version.created_at.strftime("%d %b %y at %H:%M")  %> by <%= User.find_by_id(version.whodunnit).name %>	

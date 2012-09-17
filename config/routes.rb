@@ -36,6 +36,7 @@ Storit::Application.routes.draw do
   end
 
   resources :sessions, only: [:new, :create, :destroy]
+<<<<<<< HEAD
   match '/home', to: 'public_pages#home'
   match '/contact', to: 'public_pages#contact'
   match '/ip', to: 'public_pages#ip'
@@ -47,6 +48,11 @@ Storit::Application.routes.draw do
   match '/wipo', to: 'public_pages#wipo'
   match '/wto-trips', to: 'public_pages#wto-trips'
   match '/cbd', to: 'public_pages#cbd'
+=======
+  resources :public_pages, only: [:serve_page, :upov, :about, :pvp, :contact, :home]
+  match '/ip_overview', to: '/public_pages/ip_overview/serve_page'
+  match '/ip_benefits', to: '/public_pages/ip_benefits/serve_page'
+>>>>>>> cf9acda12473e1ed0ac469d6c2484a2c14041fd5
   match '/signup',  to: 'users#new'
   match '/signup',  to: 'users#new'
   match '/signin',  to: 'sessions#new'
