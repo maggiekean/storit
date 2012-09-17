@@ -1,9 +1,9 @@
 <div id="mainContent">
-	<div id="WTOContent">
-		<h1 style="padding-top: 150px">
-		Contact -- placeholder</h1>
-		<%= @content_block.id %>
-		<%= @content_block.content %>
-		<%= link_to "Edit", edit_content_block_path(@content_block.id) %>
+	<div id="Contact">
+		<% @content_blocks.each do |c| %>
+			<h2><%= c.heading %></h2>
+			<%= raw(c.content) %>	
+		<% end %>
+
 	</div>
 </div> <!-- #mainContent -->

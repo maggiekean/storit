@@ -1,44 +1,46 @@
 	<div id="menu-container" >
 	<ul id="nav" class="dropdown dropdown-horizontal" style="float: right; ">
-		<li style="border-right: solid 1px #42371b; letter-spacing: 1px; height: 36px; line-height: 36px"	><%= link_to "Home", home_path %></li>
+		<li style="border-right: solid 1px #42371b; letter-spacing: 1px; height: 36px; line-height: 36px"	>
+		<%= link_to "Home", home_public_pages_path %></li>
 		<li class="dir"	>Intellectual Property<br> &amp; Food Security
 				<ul style="border: solid 1px #42371b; border-radius: 5px; letter-spacing: normal; margin-top: 2px;">
-					<li><%= link_to "Overview", ip_path %></li>
-					<li><%= link_to "Who Benefits from PVP?", ip_benefits_path %></a></li>
-					<li><%= link_to "Experts on PVP & Food Security", ip_experts_path %></a></li>
+					<li><%= link_to "Overview", serve_page_public_page_path("ip_overview") %></li>
+					<li><%= link_to "Who Benefits from PVP?", serve_page_public_page_path("ip_benefits") %></a></li>
+					<li><%= link_to "Experts on PVP & Food Security", serve_page_public_page_path("ip_experts") %></a></li>
 				</ul>
 			</li>
 		<li class="dir" style="letter-spacing: 1px;">Understanding Plant<br> Variety Protection
 			<ul style="border: solid 1px #42371b; border-radius: 5px; letter-spacing: normal; margin-top: 2px;">
-				<li class="dir" style=" border-bottom:solid 1px #42371b; "><%= link_to "The Convention for the Protection of New Varieties of Plants (UPOV)", upov_path(:upovSection => "historical") %>
+				<li class="dir" style=" border-bottom:solid 1px #42371b; "><%= link_to "The Convention for the Protection of New Varieties of Plants (UPOV)", upov_public_pages_path(:section => "history") %>
 				<ul style="margin-left: 5px; border-radius: 5px; border: solid 1px #42371b;  ">
-					<li><%= link_to "Historical Context", upov_path(:upovSection => "historical") %></li>
-					<li><%= link_to "Origins of UPOV", upov_path(:upovSection => "origins") %></li>
-					<li><%= link_to "Main Provisions", upov_path(:upovSection => "provisions") %></li>
-					<li><%= link_to "Institutional Infrastructure", upov_path(:upovSection =>  "infrastructure") %></li>
+					<li><%= link_to "Historical Context", upov_public_pages_path(:section => "history") %></li>
+					<li><%= link_to "Origins of UPOV", upov_public_pages_path(:section => "origins") %></li>
+					<li><%= link_to "Main Provisions", upov_public_pages_path(:section => "provisions") %></li>
+					<li><%= link_to "Institutional Infrastructure", upov_public_pages_path(:section => "infrastructure") %></li>
 				</ul>
 					</li>
 				<li class="dir" >Other Relevant Policy
 					<ul style="margin-left: 5px; border-radius: 5px; border: solid 1px #42371b;  ">
-						<li><a href="./wto-trips.shtml">World Trade Organization Trade-Related Aspects of Intellectual Property Rights (WTO-TRIPS)</a></li>
-						<li><a href="./cbd.shtml">Convention on Biological Diversity (CBD)</a></li>
-						<li><a href="./it.shtml">International Treaty on Plant Genetic Resources (IT)</a></li>
-						<li><a href="./wipo.shtml">World Intellectual Property Organization</a></li>
+						<li><%= link_to "World Trade Organization Trade-Related Aspects of Intellectual Property Rights (WTO-TRIPS)", serve_page_public_page_path("pvp_wto_trips") %></li>
+						<li><%= link_to "Convention on Biological Diversity (CBD)", serve_page_public_page_path("pvp_cbd") %></li>
+						<li><%= link_to "International Treaty on Plant Genetic Resources (IT)",serve_page_public_page_path("pvp_it") %></li>			
+						<li><%= link_to "World Intellectual Property Organization", serve_page_public_page_path("pvp_wipo")  %></li>
 					</ul>	
 				</li>
 			</ul>
 		</li>
-		<li class="dir" style="letter-spacing: 1px; height: 36px; line-height: 36px"><%= link_to "About", about_path(:aboutSection => "background") %>
+		<li class="dir" style="letter-spacing: 1px; height: 36px; line-height: 36px"><%= link_to "About", about_public_pages_path(:aboutSection => "background") %>
 			<ul style="width: 200px; border: solid 1px #42371b; border-radius: 5px; letter-spacing: normal;  margin-top: 2px;">
-				<li ><%= link_to "Background", about_path(:aboutSection => "background") %></li>
-				<li><%= link_to "Activities", about_path(:aboutSection => "activities") %></li>
-				<li><%= link_to "Member Organizations", about_path(:aboutSection => "members") %></li>
-				<li><%= link_to "Board", about_path(:aboutSection => "board") %></li>
-				<li ><%= link_to "Staff", about_path(:aboutSection => "staff") %></li>
+				<li ><%= link_to "Background", about_public_pages_path(:section => "background") %></li>
+				<li><%= link_to "Activities", about_public_pages_path(:section => "activities") %></li>
+				<li><%= link_to "Member Organizations", about_public_pages_path(:section => "members") %></li>
+				<li><%= link_to "Board", about_public_pages_path(:section => "board") %></li>
+				<li ><%= link_to "Staff", about_public_pages_path(:section => "staff") %></li>
+				<li ><%= link_to "FAQ", serve_page_public_page_path("about_faq") %></li>
 			</ul>
 		</li>
 		<li style="letter-spacing: 1px; height: 36px; line-height: 36px" >
-		<%= link_to "Contact", contact_path %>	
+		<%= link_to "Contact", serve_page_public_page_path("contact") %>	
 		</li>		
 	</ul>
 </div>

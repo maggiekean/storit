@@ -1,23 +1,32 @@
 Storit::Application.routes.draw do
-  mount Ckeditor::Engine => '/ckeditor'  
-  resources :sections do
-  end
+mount Ckeditor::Engine => '/ckeditor'  
+resources :sections do
+end
 
-  resources :applications
+resources :applications
 
-  resources :content_blocks do
-    member do
-      get 'history'
-    end
+resources :content_blocks do
+  member do
+    get 'history'
   end
-  resources :users
-  
-  resources :public_pages do
+end
+resources :users
+
+resources :public_pages do
+  member do
+    get 'serve_page'
+    get 'pvp'
+    get 'home'
+ 
+  end
     collection do
-      get 'about'
+        get 'home'
+        get 'upov'
+        get 'about'
+        get 'contact'
     end
   end
-  
+
   resources :editable_pages do
     collection do
       get 'content_block_history'
@@ -36,22 +45,11 @@ Storit::Application.routes.draw do
   end
 
   resources :sessions, only: [:new, :create, :destroy]
-  match '/home', to: 'public_pages#home'
-  match '/contact', to: 'public_pages#contact'
-  match '/ip', to: 'public_pages#ip'
-  match '/ip_experts', to: 'public_pages#ip_experts'
-  match '/ip_benefits', to: 'public_pages#ip_benefits'
-  match '/it', to: 'public_pages#it'
-  match '/upov', to: 'public_pages#upov'
-  match '/about', to: 'public_pages#about'
-  match '/wipo', to: 'public_pages#wipo'
-  match '/wto-trips', to: 'public_pages#wto-trips'
-  match '/cbd', to: 'public_pages#cbd'
+  resources :public_pages, only: [:serve_page, :upov, :about, :pvp, :contact, :home]
   match '/signup',  to: 'users#new'
   match '/signup',  to: 'users#new'
   match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy'
-  match '/admin/ip', to: 'editable_pages#ip_overview'
   match '/edit', to: 'editable_pages#view_editable_content'
   root to: 'public_pages#home'
   # The priority is based upon order of creation:

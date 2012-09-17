@@ -18,24 +18,20 @@
 
 
 #livebox {
-	width: 900px;
-	margin-right: auto; 
-	margin-left: auto; 
+	width: 960px;
 	height: 345px;
 	z-index:10;
 	position: absolute;
-	padding: 0;
-	margin: 0;
+	margin: 0 0 0 20px;
+		padding: 0;
 }
 #livetwin {
 	width: 960px;
-	margin-right: auto; 
-	margin-left: auto; 
 	height: 345px;
 	z-index:1;
 	position: absolute;
 	padding: 0;
-	margin: 0;
+	margin: 0 0 0 20px;
 	background-color: #000000;
 	display: none;
 }

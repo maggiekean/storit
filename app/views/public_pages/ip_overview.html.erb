@@ -1,0 +1,25 @@
+<div id="mainContent">
+	<div id="IPContent">
+		<div class="indent">
+	   		<div class="row-1 ">
+		    	<h1>Plant Variety Protection &amp; Food Security</h1>
+		    	<div class="wrapper">
+			     	<img src="/assets/sec-woman.png" alt="" style="float: left; 	margin: 0 30px 10px 0;	">
+				    <h2>New and improved plant varieties are one way of achieving better yields and adaptability to global change, both of which are important to food security.</h2>
+					<% @content_blocks.each do |c| %>
+						<h2><%= c.heading %></h2>
+						<%= raw(c.content) %>	
+					<% end %>
+				</div>
+			</div>	     
+		</div>
+	</div>
+		
+</div> <!-- #mainContent -->
+<% content_for :javascript do %>	  
+<script>
+$(document).ready(function() {
+		$("[rel=footnote]").inlineFootnote();	
+	});
+</script>
+<% end %>
