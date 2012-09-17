@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
  skip_before_filter :signed_in_user
+ layout 'public_pages'
   def new
   end
 

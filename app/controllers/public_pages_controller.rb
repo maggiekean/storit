@@ -3,8 +3,8 @@ class PublicPagesController < ApplicationController
   layout "public_pages"
 
   def home
-    @content_blocks_info = ContentBlock.find_all_by_section_id(params[:info_id])
-    @content_blocks_news = ContentBlock.find_all_by_section_id(params[:news_id])
+    @content_blocks_info = ContentBlock.find_all_by_section_id(Section.find_by_name("home_info").id)
+    @content_blocks_news = ContentBlock.find_all_by_section_id(Section.find_by_name("home_news").id)
   end
 
   def serve_page                              # default for pages with only one set of content blocks 

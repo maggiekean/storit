@@ -30,9 +30,9 @@
 								<h2>Understanding Plant Variety Protection &amp; Other Relevant Policy</h2>
 								<ul class="img-list">
 				                 	<% if (@content_blocks_info)  %>
-										<% @content_blocks_info.each do |c| %>
+										<% @content_blocks_info.each do |c| %><li>
 												<h3><%= c.heading %></h3>	
-												<%= raw(c.content) %>
+												<%= raw(c.content) %></li>
 										<% end %>
 									<% end %>
 					         	</ul>
@@ -40,22 +40,12 @@
 							<div class="col-2" >
 								<h2>News </h2>
 								<ul class="news-list">
-									<li>
-										<h4><span>7/10/2012 </span>
-											<a href="http://www.businessdayonline.com/NG/index.php/markets/agribusiness/39777-iita-wacci-sign-pact-to-train-plant-breeders" target="_blank">The Growing Allure of Plant Patenting for Brand Differentiation</a></h4>
-							                  Let’s start with what is good about the New Alliance for Food Security and Nutrition. First, with an estimated 1 billion people going to bed hungry every night, anything that keeps agriculture and food security at the top of the international agenda is a good thing.  <a href="#">Read More.</a>
-									</li>
-									<li>
-										<h4><span>06/20/12</span>
-											<a href="#">IITA, WACCI sign pact to train plant breeders
-											</a></h4>
-							                  The International Institute of Tropical Agriculture (IITA) and the West Africa Centre for Crop Improvement (WACCI) have signed a memorandum of understanding (MoU) aimed at training plant breeders in Africa - a strategic move to boost the number of plant breeders on the continent. <a href="http://www.businessdayonline.com/NG/index.php/markets/agribusiness/39777-iita-wacci-sign-pact-to-train-plant-breeders" target="_blank">Read More.</a>
-									</li>
-									<li>
-										<h4><span>06/21/12</span>
-											<a href="http://s.tt/1en1t" target="_blank">UNL Launches Online Plant Breeding &amp; Genetics Certificate Program</a></h4>
-							                  LINCOLN, Neb., June 13, 2012 /PRNewswire-iReach/ -- The University of Nebraska-Lincoln recently launched a new online educational program designed to meet the growing demand for plant breeding and genetics professionals. <a href="http://s.tt/1en1t" target="_blank">Read More.</a>
-									</li>
+						                 	<% if (@content_blocks_news)  %>
+												<% @content_blocks_news.each do |c| %>
+														<li><h4><%= c.heading %></h4>	
+														<%= raw(c.content) %></li>
+												<% end %>
+											<% end %>
 								</ul>
 							</div> <!-- col-2 -->
 						</div> <!-- wrapper -->
