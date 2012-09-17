@@ -1,76 +1,148 @@
 
-			<div id="mainContent" style="padding-top: 50px;">
-				<div id="aboutContent" >
-					<div class="subtopicHeading" >Background 					</div>
-					<% if @open_section == "background" %>
+			<div id="mainContent">
+				<div id="aboutContent" style="padding-top: 30px">
+					<div class="subtopicHeading" >Background 
 						<span id="bgIcon" class="ui-icon ui-icon-minusthick"></span>
+					</div>
 					<div id="background">
-					<% else %>
-						<span id="bgIcon" class="ui-icon ui-icon-plusthick"></span>
-					<div id="background" style="display: none">
-					<% end %>
-						<% @content_blocks_bg.each do |c| %>
-								<h3><%= c.heading %></h3>	
-								<%= raw(c.content) %>
-						<% end %>
+						Seeds for All<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>	is an international non-governmental association under Swiss Law (Article 60ff. of the Swiss Civil Code.)   Seeds for All was founded by seven international non-governmental organization bound by a common interest in food security, sustainable development, community empowerment and poverty eradication.  The founding members understood that long-term sustainable development and food security will only come about with a debate rooted in the realities of developing countries and including all stakeholders, not just select business and political elite.  The members share the concern that the global conversation on innovation policy and intellectual property rights is not inclusive and in particular discussions regarding plant variety protection does not include or consider the needs and interests of smallholder farmers.[link to background on connection between IP and food security]
+						</p><p>
+						Indeed, the founders of Seeds for All discovered that the global “mainstream” dialogue on plant variety protection was taking place in Geneva at the UPOV Convention[link to page of website on UPOV], where the only civil society organizations present as observers were from industry.  The founders asked themselves; if the stated mission of UPOV is “to provide and promote an effective system of plant variety protection, with the aim of encouraging the development of new varieties of plants, for the benefit of society”<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>surely more input from a broader sector of society is desirable? And so the founding organizations met and established Seeds for All.				</p><p>
+							he mission of Seeds for All is to promote plant breeding for the benefit of society, fully implementing farmers’ rights (including those of small and marginal farmers) on plant genetic resources and promoting biodiversity.
+						</p>
+
+						
 					</div><!-- #background -->
+					<div class="subtopicHeading" >Activities
+						<span id="actIcon" class="ui-icon ui-icon-plusthick"></span>
+						</div>
+					</div>
+					<div id="activities" style="display: none;">
+						<p>
+						Seeds for All, under its former name APBREBES, first applied for observer status to UPOV in September 2009. The Consultative Committee – the de facto decision-making and only body of UPOV not open to observers – decided at its October 2009 meeting that it could not consider the application until Seeds for All demonstrated its competence in areas of direct relevance to matters governed by the UPOV Convention [reminder to link to the blog I will write on observer status]. The UPOV Rules Governing the Granting of Observer Status to Non-Governmental Organizations states “the statutes for international non-governmental organizations will form the basis to determine that competence.” Accordingly, Seeds for All in May 2010 resubmitted its original application and attached its statutes of incorporation as well as a summary of activities and competences of its member organizations.
+						</p><p>
+						Seeds for All (known at the time as APBREBES) was granted observer status to the Council, the Administrative and Legal Advisory Commiteee (CAJ), the Technical Committee and the Technical Working Groups.<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>The Consultative Committee remains closed to observers. The European Coordination Via Campesina (ECVC) was granted observer status at the same time.
+						</p><p>
+						After Seeds for All and ECVC were granted observer status, UPOV established an ad hoc working group on rules for observers and access to documents. To give input to this process, in April 2011 Seeds for All produced the report “Observer Status and Access to Documents - Comparative Analysis across Selected International Organizations.”<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup>Seeds for All submitted the report to the UPOV Office in October 2011 stressing the three recommendations: 
+						<ol><li>
+						Make all UPOV documents publicly available</li><li>
+						Invite all observers to join it work, with a view to achieve a balanced representation of the different stakeholders</li><li>
+						Allow participation of observers in the Consultative Committee </li></ol>
+						<p>
+						UPOV has made strides to increase transparency.  After the release of the report on norms for observers and access to documents, UPOV abolished its “first restricted” area where all documents to the Legal and Administrative Committee as well as different technical working groups had been located and unavailable to observers and the general public. This increase in public availability of documents is important first step to make UPOV more transparent, accountable and participatory.  Seeds for All will continue to advocate for all UPOV documents to be made publicly available and for the opening of meetings of the Consultative Committee to observers.
+						</p><p>
+						Seeds for All has recently hired its first Executive Director.  It will continue its work monitoring UPOV developments and working to ensure that in encouraging the development of new varieties for the “benefit of society” adequate space is left internationally and nationally for consideration of how UPOV can best be applied to help the world meets its food security and poverty alleviation objectives.<sup id="fnref:5"><a href="#fn:5" rel="footnote">5</a></sup>
+						</p>
 
-					<div class="subtopicHeading" >Activities</div>
-					<% if @open_section == "activities" %>
-						<span id="activitiesIcon" class="ui-icon ui-icon-minusthick"></span>
-					<div id="activities" >
-					<% else %>
-						<span id="activitiesIcon" class="ui-icon ui-icon-plusthick"></span>
-					<div id="activities" style="display: none" >
-					<% end %>
-					<% @content_blocks_activities.each do |c| %>
-								<h3><%= c.heading %></h3>	
-								<%= raw(c.content) %>
-						<% end %>						
+					
+						
 					</div><!-- #activities -->
-
-					<div class="subtopicHeading" >Member Organizations						</div>
-					<% if @open_section == "members" %>
-						<span id="membersIcon" class="ui-icon ui-icon-minlusthick"></span>
-						<div id="members" >
-					<% else %>
+					<div class="subtopicHeading" >Member Organizations
 						<span id="membersIcon" class="ui-icon ui-icon-plusthick"></span>
-						<div id="members" style="display: none;">
-					<% end %>
-						<% @content_blocks_members.each do |c| %>
-								<h3><%= c.heading %></h3>	
-								<%= raw(c.content) %>
-						<% end %>
+						</div>
+					<div id="members" style="display: none;">
+							<h4>The Berne Declaration – Switzerland</h4>
+							<p>The Berne Declaration (BD) is a Swiss non-governmental organization with more than 21,000 Members, promoting more equitable, sustainable and democratic development and North-South relations since 1968. Our methods to reach our goals are research, public awareness raising and advocacy work.</p><p>
+						In the field of plant variety protection and patents on seeds BD is active since over ten years with advocacy work. On national level the BD was the main representative of the civil society (incl. farmer organizations) in the debate and parliamentarian hearings about the reform of our plant variety protection act and the patent law. Furthermore a representative of the BD is a member of the Swiss national FAO Committee (CNS-FAO), an advisory body to the Swiss Government on topics related to food security and FAO. On international level the Berne Declaration was always a member of the Swiss Delegation to the Governing of the FAO Plant Treaty. The BD is an active founding member of the coalition &ldquo;No patents on seeds&rdquo; a network of NGOs and Farmers Organizations working on issues related on IP and seeds. The Berne Declaration has publishes several articles and papers on issues like PVP, UPOV, Patents on seeds, the FAO plant treaty, etc.
+						</p>
+						Learn more on their website: <a href="http://www.evb.ch/en">www.evb.ch/en</a>
+						<h4>Center for International Environmental Law – USA </h4>
+						<p>
+						For 20 years, The Center for International Environmental Law (CIEL), a nonprofit organization, has been working to use international law and institutions to protect the environment, promote human health, and ensure a just and sustainable society. We provide a wide range of services including legal counsel, policy research, analysis, advocacy, education, training,and capacity building. CIEL addresses the implications of IP and seeds through advocacy, research, and advice. CIEL has filed requests for reexamination of plant patents with the US Patent and Trademark Office on behalf of the Coordinating Body of Indigenous Organizations of the Amazon Basin (COICA) and the Coalition for Amazonian Peoples and Their Environment (Amazon Coalition), initially resulting of a rejection of the patent. CIEL has been actively participating in many international fora regarding IP, genetic resources, traditional knowledge and biodiversity. CIEL has worked with NGOs and Indigenous Groups on the issues before the various WIPO and WTO committees dealing with IPRs and Seeds, as well as related issues before the FAO, the CBD and UPOV. CIEL has published a quarterly update of IPRs in various fora, including UPOV, which report on activities relating to seeds. </p>
+						Learn more on their website: <a href="www.ciel.org">	www.ciel.org</a>					
+					<h4>Community Technology Development Trust – Zimbabwe </h4>
+					<p>
+					CTDT is a registered non-governmental organization founded in 1993 whose main effort is directed towards empowering communities over custodianship of their genetic resources and the protection of these resources through supportive policy and legislative frameworks to enhance conservation and sustainable use. CTDT has emerged as one of the strongest advocates in the region ensuring that farmers have adequate access to genetic resources, receive crop improvements and technological support and participate in the process of formulation of corresponding national and regional policies. CTDT, despite operating under difficult and challenging period in the history of the country, the organization has increased on farm seed production and is promoting OPV maize , sorghum cow peas in order to help small holder farmers to cope and adapt with the challenges brought about by climate change. The local communities now use locally produced seed varieties that are suitable to their own agro-ecological zones. In addition, the organization has established community seed banks to enhance access of the means of seed production. CTDT has greatly influenced policy formulation in Zimbabwe especially on issues related to the domestication of the FAO-Treaty and highlighting the importance of recognition of farmers&rsquo; rights. CTDT has been involved in drafting memorandum of principles for Farmers&rsquo; Rights legislation in Zimbabwe. CTDT has produced many publications including: </p>
+					<ul><li>
+								Farmers&rsquo; Rights Regional Policy Briefs (Malawi, Zambia and Zimbabwe)</li><li>
+								a Training manual on access to biological resources, benefit sharing and material transfer agreements. </li><li>
+								publications addressing the impact of IPRs on agro-biodiversity including the &ldquo;Hidden Threats&rdquo; which is an analysis of IPRs on agro-biodiversity and its threats to securing food security
+							</li></ul>
+							<p>	In order to expand its influence in the region on matters related to people centered rural development and the areas of operation as stipulated above, CTDT has opened a country office in Zambia.
+								</p>
+							Learn more on their website: <a href="http://www.ctdt.co.zw/">www.ctdt.co.zw</a>						
+								<h4>Development Fund – Norway </h4>
+								<p>
+							The Development Fund (DF) is an independent Norwegian non-governmental organization supporting development programs through its local partners in Africa, Asia and Latin America since 1978. DF believes that the fight against hunger and poverty should be based on conservation and development of genetic resources for food and Agriculture. DF&rsquo;s global program on agricultural biodiversity support farmers and local institutions to build their capacities in participatory plant breeding and research. DF is also supporting establishment of community seed banks for better access to genetic resources for breeding purposes. The DF work to raise public awareness on agricultural biodiversity, international and national regulations governing agricultural biodiversity and lobby national governments to promote development of genetic resources for better food security. Regarding regulations, DF is working on patents and plant variety protection (PVP) both in Norway and in the south through its networks for improved public participation in decision making. DF is actively participating in debates and contributing to public hearings in Norway to improve PVP and patent law. As part of Norwegian delegation, DF is actively participating in the meetings of UPOV bodies and the governing body of FAO's plant Treaty. The DF is an active founding member of the coalition &ldquo;no-patents­on-seeds&rdquo; a network of NGOs and Farmers Organizations working on issues related to intellectual property rights on genetic resources for food and agriculture. The DF has published several newspaper articles and working documents in Norwegian on issues like PVP, UPOV, Patents on plants and animal and the FAO plant treaty. </p>
+					Learn more on their website: <a href="http://www.utviklingsfondet.no/english">www.utviklingsfondet.no/english</a> 
+						<h4>Local Initiatives for Biodiversity, Research and Development – Nepal </h4>
+					<p>
+					Local Initiatives for Biodiversity, Research and Development (LI-BIRD), a non­governmental organization established in 1995 committed to improve the livelihoods of resource poor people of Nepal through sustainable management of natural resources and enabling policy environment. LI-BIRD works with and empowers poor and marginalized people for their well-being through strengthening capacity of people and local institutions for improved access to resources and services; ensuring equity and social justice; promoting local innovations; managing biodiversity and ecosystem services; generating and sharing knowledge; forging local, national and international alliances and partnerships; and engaging in influencing and changing policy decisions at all levels. LI-BIRD has been working with a wide range of partners from farming communities to national research and development organizations and international research centers as farmers' communities and community organizations; non-governmental organizations; private entrepreneurs, academic institutions, government research and development organizations. 
+					</p><p>
+					LI-BIRD has been pioneer in developing and institutionalizing participatory crop improvement methods, such as participatory plant breeding, and participatory variety selection, community-based seed production (CBSP); community-based in-situ on-farm conservation and management of agro-biodiversity &mdash; linking biodiversity with livelihoods. LI-BIRD has been working on and contributing to the formulation of several policy and legal instruments related to the use of genetic resources and associated traditional knowledge in agriculture. LI-BIRD also seeks ways to support policy and legal instruments for promotion of safe and quality food addressing bio-safety issues arising from the use of biotechnology. LI-BIRD has experience and expertise in evidence-based policy research and advocacy, and policy formulation, for example formulation of Agricultural Biodiversity Conservation Policy and drafting of Plant Variety Protection and Farmers&rsquo; Rights (PVP&amp;FR) Bill. 
+					</p>
+					Learn more on their website: <a href="http://www.libird.org/">www.libird.org</a>
+
+						<h4>The Southeast Asia Regional Initiative for Community Empowerment – Philippines </h4>
+						<p>The Southeast Asia Regional Initiative for Community Empowerment (SEARICE) is a regional civil society organization based in the Philippines that is working in several countries in Asia. It aims to strengthen farmers&rsquo; conservation and sustainable use of plant genetic resources. Towards this end, SEARICE implements various programs and activities such as, participatory plant breeding including working with State institutions towards recognizing and supporting farmers&rsquo; roles in conserving and improving plant genetic resources (PGR); research and documentation on farmers&rsquo; initiatives in PGR use; lobbying with governments for adoption of policies and programs that will support farmer-based conservation and development of PGR; campaigns to raise public awareness on the threats and challenges facing PGR diversity for food and agriculture; and, engagement in various international platforms (such as the ITPGRF A, CBD and UNFCCC) in order to help broaden global awareness and to institutionalize good practices and policies. SEARICE considers patents, plant variety protection and other forms of IPRs on agricultural genetic resources as a key issue to work on in so far as these affect farmers&rsquo; access to and use of seeds. SEARICE is actively working at local, national and international levels towards enhancing and promoting policies and legislations related to governance of PGR. SEARICE works with various stakeholders to strengthen modalities of ensuring farmers&rsquo; continuing access to seeds. 
+					</p>
+					Learn more on their website: <a href="http://www.evb.ch/en">www.evb.ch/en</a>											
+
+								<h4>Third World Network – Malaysia </h4>
+							<p>
+							Third World Network (TWN) has operated for about 25 years as a non-profit international network of organizations and individuals involved in issues relating to sustainable development, the South and North-South relations. Its registered headquarters is in Malaysia. TWN has regional secretariats in Montevideo, Uruguay; Accra, Ghana as well as offices in Kuala Lumpur, Malaysia and Geneva, Switzerland. Its objective is to promote the interests and perspectives of the South in economic, social and environmental areas. TWN has affiliated organizations in several Southern countries and also cooperates with a number of organizations in the North. TWN&rsquo;s activities include research and publications, organization of workshops for relevant stakeholders, as well as participating in intergovernmental meetings especially at the UN. A focus area for TWN is agricultural biodiversity, farmers&rsquo; rights and intellectual property. In this regard, TWN actively participates in intergovernmental meetings of FAO, CBD, WTO &amp; WIPO. On these issues, TWN has also participated in a number of national processes. In 2009, with UNDP support, TWN co-organized national consultations with government agencies in Indonesia and the Philippines on national implementation of Article 27.3(b) of the WTO TRIPs Agreement as it relates plant variety protection. In addition, TWN&rsquo;s Director is currently on the CGIAR Genetic Resources Policy Committee. 
+							</p>
+							Learn more on their website: <a href="http://www.twnside.org.sg/">www.twnside.org.sg</a>						
+						
 					</div>
 				
-					
-					<div class="subtopicHeading" >Board					</div>
-					<% if @open_section == "board" %>									
-							<span id="boardIcon" class="ui-icon ui-icon-minusthick"></span>
-							<div id="board" >
-					<% else %>									
+					<div class="subtopicHeading" >Board
 							<span id="boardIcon" class="ui-icon ui-icon-plusthick"></span>
-							<div id="board" style="display: none;">
-					<% end %>
-						<% @content_blocks_board.each do |c| %>
-								<h3><%= c.heading %></h3>	
-								<%= raw(c.content) %>
-						<% end %>
 					</div>
-					
-					<div class="subtopicHeading" >Staff						</div>
-					<% if @open_section == "staff" %>
-						<span id="staffIcon" class="ui-icon ui-icon-minusthick"></span>
-						<div id="staff" >
-					<% else %>
+					<div id="board" style="display: none;">
+						Board Info here
+					</div>
+					<div class="subtopicHeading" >Staff
 						<span id="staffIcon" class="ui-icon ui-icon-plusthick"></span>
-						<div id="staff" style="display: none;">
-					<% end %>
-						<% @content_blocks_staff.each do |c| %>						
-						<h3><%= c.heading %></h3>	
-								<%= raw(c.content) %>
-						<% end %>
-					</div>	
+						</div>
+					<div id="staff" style="display: none;">
+						Staff info. here
+					</div>
+					<div class="subtopicHeading" >Footnotes
+							<span id="footnotesIcon" class="ui-icon ui-icon-plusthick"></span>
+							</div>
+					<div id="footnotes" style="display: none;">
+						
+							<div class="footnotes">
+							 <hr>
+							 <ol>
+								 <li id="fn:1">
+								  <p>
+								   	 The original name of Seeds for All was The Association for Plant Breeding for the Benefit of Society (APBREBES). The founding members changed the name to Seeds for All in May 2012.
+								 </p>
+								  <a href="#fnref:1" rev="footnote">↩</a>  
+								  </li>
+
+								  <li id="fn:2">
+								  <p>
+								   <a href="http://www.upov.int/about/en/mission.html">www.upov.int/about/en/mission.html</a>
+								 </p>
+								  <a href="#fnref:2" rev="footnote">↩</a> 
+								  </li>
+							 <li id="fn:3">
+							 <p>
+							  	 <a href="http://www.upov.int/about/en/organigram.html">www.upov.int/about/en/organigram.html</a>
+							 </p>
+							 <a href="#fnref:3" rev="footnote">↩</a> 
+							 </li>
+
+							 <li id="fn:4">
+							 <p>
+							  <a href="http://www.evb.ch/cm_data/Report_rulesconserningobservers_finaldraft.pdf">Rules Concerning Observers</a>
+							 </p>
+							 <a href="#fnref:4" rev="footnote">↩</a> 
+							 </li>
+
+							 <li id="fn:5">
+							 <p>
+							  <a href=" http://www.un.org/millenniumgoals/bkgd.shtml">www.un.org/millenniumgoals/bkgd.shtml</a>
+							 </p>
+							 <a href="#fnref:5" rev="footnote">↩</a> 
+							 </li>
+							</ol>
+							 </div>
+						</div>
+						
 				</div><!-- #aboutContent -->
 			</div> <!-- #mainContent -->
 			<% content_for :javascript do %>	  
@@ -78,10 +150,72 @@
 
 			$(document).ready(function() {
 
-					$( '.ui-icon').click(function() {
-						$(this).toggleClass('ui-icon-minusthick').toggleClass('ui-icon-plusthick');
-					  	$(this).next().toggle('blind');
+			    if ("<%= aboutSection %>"  == "background") {
+				}
+				else  {
+					if ("<%= aboutSection %>"  == "activities") {
+						document.getElementById('background').style.display = 'none'; 
+					    document.getElementById('activities').style.display = 'block'; 
+						$( '#bgIcon').removeClass("ui-icon-minusthick").addClass("ui-icon-plusthick");	
+						$( '#actIcon').removeClass("ui-icon-plusthick").addClass("ui-icon-minusthick");
+					}
+					else  {
+						if ("<%= aboutSection %>"  == "members") {
+							document.getElementById('background').style.display = 'none'; 
+							document.getElementById('members').style.display = 'block'; 
+							$( '#bgIcon').removeClass("ui-icon-minusthick").addClass("ui-icon-plusthick");	
+							$( '#membersIcon').removeClass("ui-icon-plusthick").addClass("ui-icon-minusthick");
+						}
+						else  {
+							if ("<%= aboutSection %>"  == "board") {
+								document.getElementById('background').style.display = 'none'; 
+								document.getElementById('board').style.display = 'block'; 
+								$( '#bgIcon').removeClass("ui-icon-minusthick").addClass("ui-icon-plusthick");	
+								$( '#boardIcon').removeClass("ui-icon-plusthick").addClass("ui-icon-minusthick");
+							}
+							else  {
+								if ("<%= aboutSection %>"  == "staff") {
+									document.getElementById('background').style.display = 'none'; 
+									document.getElementById('staff').style.display = 'block'; 
+									$( '#bgIcon').removeClass("ui-icon-minusthick").addClass("ui-icon-plusthick");	
+									$( '#staffIcon').removeClass("ui-icon-plusthick").addClass("ui-icon-minusthick");
+								}
+							}
+						}
+					}
+				}
+			});
+			$(document).ready(function() {
 
+					$( '#bgIcon').click(function() {
+					  	$( '#background').toggle('blind');
+					 	$( '#bgIcon').toggleClass('ui-icon-minusthick');
+						$( '#bgIcon').toggleClass('ui-icon-plusthick');
+					});
+					$( '#actIcon').click(function() {
+					  	$('#activities').toggle('blind');
+					 	$( '#actIcon').toggleClass('ui-icon-minusthick');
+						$( '#actIcon').toggleClass('ui-icon-plusthick');		      
+					});
+					$( '#footnotesIcon').click(function() {
+					  	$( '#footnotes').toggle('blind');
+					 	$( '#footnotesIcon').toggleClass('ui-icon-minusthick');
+						$( '#footnotesIcon').toggleClass('ui-icon-plusthick');			      
+					});
+					$( '#membersIcon').click(function() {
+					  	$( '#members').toggle('blind');
+					 	$( '#membersIcon').toggleClass('ui-icon-minusthick');
+						$( '#membersIcon').toggleClass('ui-icon-plusthick');			      
+					});
+					$( '#staffIcon').click(function() {
+					  	$( '#staff').toggle('blind');
+					 	$( '#staffIcon').toggleClass('ui-icon-minusthick');
+						$( '#staffIcon').toggleClass('ui-icon-plusthick');			      
+					});
+					$( '#boardIcon').click(function() {
+					  	$( '#board').toggle('blind');
+					 	$( '#boardIcon').toggleClass('ui-icon-minusthick');
+						$( '#boardIcon').toggleClass('ui-icon-plusthick');			      
 					});
 					$("[rel=footnote]").inlineFootnote();	
 				});

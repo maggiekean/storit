@@ -1,3 +1,19 @@
+<% content_for :javascript do %>
+<script>
+	$(function() {
+		$('#allinone_contentSlider_common').allinone_contentSlider({
+			skin: 'common',
+			width: 920,
+			height: 500,
+			autoHideBottomNav:false,
+			showPreviewThumbs:false,
+			autoHideNavArrows:false,
+			autoPlay:0
+		});
+		$("[rel=footnote]").inlineFootnote();	
+	});
+</script>
+<% end %>
 <div id="page2">
 	<div id="mainContent">
 		<div id="IPContent">
@@ -7,8 +23,8 @@
 				<h2>PVP &amp; Food Security &ndash; Some Expert Opinions</h2>
 				<div id="morebox" style="margin-top: -50px; width: 350px;" >
 					<h3>More about Plant Variety Protection</h3>
-						<%= link_to "Intellectual Property & Food Security — Overview", serve_page_public_page_path("ip_overview") %><br>
-					<%= link_to "Who Benefits from PVP?", serve_page_public_page_path("ip_benefits") %>
+					<a href="ip-benefits.shtml">Who Benefits From Plant Variety Protection?</a><br>
+					<a href="ip.shtml">Intellectual Property &amp; Food Security &ndash; Overview</a>
 				</div>
 		    	<div id="allinone_contentSlider_common" >
 		                <!-- CONTENT -->
@@ -16,11 +32,11 @@
 
 
 							<li data-text-id="#allinone_contentSlider_photoText2">
-								<img src="/assets/scherr-logos.jpg" style="margin: 320px 120px 80px 120px;"></li>
-							<li data-text-id="#allinone_contentSlider_photoText3"><img src="/assets/dutfield-pic.png" style="margin: 100px 50px 100px 640px;"></li>
-							<li data-text-id="#allinone_contentSlider_photoText4"><img src="/assets/ziegler.jpg" style="margin: 100px 550px 100px 20px;">
+								<img src="images/scherr-logos.jpg" style="margin: 320px 120px 80px 120px;"></li>
+							<li data-text-id="#allinone_contentSlider_photoText3"><img src="images/dutfield-pic.png" style="margin: 100px 50px 100px 640px;"></li>
+							<li data-text-id="#allinone_contentSlider_photoText4"><img src="images/ziegler.jpg" style="margin: 100px 550px 100px 20px;">
 							</li>
-							<li data-text-id="#allinone_contentSlider_photoText5"><img src="/assets/pengelly.png" style="margin: 100px 20px 100px 460px;">
+							<li data-text-id="#allinone_contentSlider_photoText5"><img src="images/pengelly.png" style="margin: 100px 20px 100px 460px;">
 													</li>
 
 		                </ul>    
@@ -32,7 +48,7 @@
 		                <div class="allinone_contentSlider_text_line" data-initial-left="50" data-initial-top="-20" data-final-left="50" data-final-top="120" data-duration="0.5" data-fade-start="0" data-delay="0">                    
 		                    <div id="topcommonTextBgLeft2">
 
-		                        <div class="textElement2"><div class="bigquo"><img src="/assets/ldquo.png"></div>Today, the world is stuck in a vicious cycle that locks farmers, governments, companies and communities in the pursuit of short-term, narrowly defined solutions to food, energy, and water conflicts as they emerge. We are often solving one problem while exacerbating another, using blinkered crisis management approaches. <div class="bigquo"><img src="/assets/rdquo.png"></div></div>
+		                        <div class="textElement2"><div class="bigquo"><img src="images/ldquo.png"></div>Today, the world is stuck in a vicious cycle that locks farmers, governments, companies and communities in the pursuit of short-term, narrowly defined solutions to food, energy, and water conflicts as they emerge. We are often solving one problem while exacerbating another, using blinkered crisis management approaches. <div class="bigquo"><img src="images/rdquo.png"></div></div>
 
 		                    </div>
 
@@ -50,7 +66,7 @@
 		                <div class="allinone_contentSlider_text_line" data-initial-left="70" data-initial-top="500" data-final-left="70" data-final-top="100" data-duration="0.5" data-fade-start="0" data-delay="0">                    
 		                    <div id="topcommonTextBgLeft3">
 
-		                        <div class="textElement3"><div class="bigquo"><img src="/assets/ldquo.png"></div>Doubtless there are serious limits to the reliability of economic analyses of the patent and PBR systems whatever methodology is adopted &hellip; Yet the story told here and the analytical approach chosen both strongly discourage any expectation that patents and PBRs (albeit to a less problematical extent) finely balance the interests of existing owners, potential owners, users and the public while optimally inducing welfare-enhancing innovation, or could ever do so.  … The best we can do is reduce the built-in inequities and imbalances. It is extremely doubtful that we-can remove them completely. Nonetheless, we should not give up trying. <div class="bigquo"><img src="/assets/rdquo.png"></div><p>&mdash; Graham Dutfield, &ldquo;Intellectual Property Rights and the Life Science Industries: A 20th Century History&rdquo;</div>
+		                        <div class="textElement3"><div class="bigquo"><img src="images/ldquo.png"></div>Doubtless there are serious limits to the reliability of economic analyses of the patent and PBR systems whatever methodology is adopted &hellip; Yet the story told here and the analytical approach chosen both strongly discourage any expectation that patents and PBRs (albeit to a less problematical extent) finely balance the interests of existing owners, potential owners, users and the public while optimally inducing welfare-enhancing innovation, or could ever do so.  … The best we can do is reduce the built-in inequities and imbalances. It is extremely doubtful that we-can remove them completely. Nonetheless, we should not give up trying. <div class="bigquo"><img src="images/rdquo.png"></div><p>&mdash; Graham Dutfield, &ldquo;Intellectual Property Rights and the Life Science Industries: A 20th Century History&rdquo;</div>
 
 		                    </div>
 
@@ -61,7 +77,7 @@
 			                <div class="allinone_contentSlider_text_line" data-initial-left="300" data-initial-top="550" data-final-left="300" data-final-top="90" data-duration="0.5" data-fade-start="0" data-delay="0">                    
 			                    <div id="topcommonTextBgLeft4">
 
-			                        <div ><div class="bigquo"><img src="/assets/ldquo.png"></div>NGOs and farmers are particularly concerned about technologies that prevent seeds from regenerating and the use of intellectual property rights over seeds, which require farmers to purchase new seeds every year, threatening their independence and capacity to generate their own seed stocks.  A marked paradigm shift has occurred from a system seeking to foster food security on the basis of the free exchange of knowledge, to a system seeking to achieve the same goal on the basis of the private appropriation of knowledge.  Monsanto has recently filed 475 lawsuits against farmers. One particular case has caught the headlines - Percy Schmeiser, a Saskatchewan, Canada, canola farmer ordered to pay US$ 400,000 to Monsanto in compensation for a canola crop which Schmeiser insists he did not plant, arguing that his crop was contaminated by Monsanto seed. The Special Rapporteur believes that whilst the patent rights of corporations must be protected, the rights of small farmers must also be protected.<div class="bigquo"><img src="/assets/rdquo.png"></div><p>&mdash; Report submitted by the Special Rapporteur on the right to food, Jean Ziegler, in accordance with Commission on Human Rights resolution 2003/25* </div>
+			                        <div ><div class="bigquo"><img src="images/ldquo.png"></div>NGOs and farmers are particularly concerned about technologies that prevent seeds from regenerating and the use of intellectual property rights over seeds, which require farmers to purchase new seeds every year, threatening their independence and capacity to generate their own seed stocks.  A marked paradigm shift has occurred from a system seeking to foster food security on the basis of the free exchange of knowledge, to a system seeking to achieve the same goal on the basis of the private appropriation of knowledge.  Monsanto has recently filed 475 lawsuits against farmers. One particular case has caught the headlines - Percy Schmeiser, a Saskatchewan, Canada, canola farmer ordered to pay US$ 400,000 to Monsanto in compensation for a canola crop which Schmeiser insists he did not plant, arguing that his crop was contaminated by Monsanto seed. The Special Rapporteur believes that whilst the patent rights of corporations must be protected, the rights of small farmers must also be protected.<div class="bigquo"><img src="images/rdquo.png"></div><p>&mdash; Report submitted by the Special Rapporteur on the right to food, Jean Ziegler, in accordance with Commission on Human Rights resolution 2003/25* </div>
 
 			                    </div>
 
@@ -72,7 +88,7 @@
 				                <div class="allinone_contentSlider_text_line" data-initial-left="20" data-initial-top="550" data-final-left="20" data-final-top="90" data-duration="0.5" data-fade-start="0" data-delay="0">                    
 				                    <div id="topcommonTextBgLeft5">
 
-				                          <div ><div class="bigquo"><img src="/assets/ldquo.png"></div>Even for a donor with the financial strength of WIPO and its level of commitment to IP technical assistance globally, the resources that are allocated to national programmes in LDCs and low income countries seem insufficient even for the narrower task of supporting better participation in IP rule making and modernising IP administration – let alone the much bigger job of broadening the scope of IP assistance programmes to encompass a package of policy reforms and capacity building aimed at stimulating more local innovation through R&amp;D to improve productivity and competitiveness, as well as greater use of the IP system by small and medium sized enterprises.<div class="bigquo"><img src="/assets/rdquo.png"></div><p>&mdash; Thomas Pengelley, Technical Assistance for the Formulation and Implementation of Intellectual Property Policy in Developing Countries and Transition Economies, June 2005
+				                          <div ><div class="bigquo"><img src="images/ldquo.png"></div>Even for a donor with the financial strength of WIPO and its level of commitment to IP technical assistance globally, the resources that are allocated to national programmes in LDCs and low income countries seem insufficient even for the narrower task of supporting better participation in IP rule making and modernising IP administration – let alone the much bigger job of broadening the scope of IP assistance programmes to encompass a package of policy reforms and capacity building aimed at stimulating more local innovation through R&amp;D to improve productivity and competitiveness, as well as greater use of the IP system by small and medium sized enterprises.<div class="bigquo"><img src="images/rdquo.png"></div><p>&mdash; Thomas Pengelley, Technical Assistance for the Formulation and Implementation of Intellectual Property Policy in Developing Countries and Transition Economies, June 2005
 										</div>
 
 				                    </div>
@@ -86,19 +102,3 @@
 		  </div>
 	</div> <!-- #mainContent -->
 </div>
-<% content_for :javascript do %>
-<script>
-	$(function() {
-		$('#allinone_contentSlider_common').allinone_contentSlider({
-			skin: 'common',
-			width: 920,
-			height: 500,
-			autoHideBottomNav:false,
-			showPreviewThumbs:false,
-			autoHideNavArrows:false,
-			autoPlay:0
-		});
-		$("[rel=footnote]").inlineFootnote();	
-	});
-</script>
-<% end %>

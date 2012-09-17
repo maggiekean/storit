@@ -1,32 +1,3 @@
-
-<div id="page2b">
-			<div id="mainContent">
-				<div id="IPContent">
-					<div class="indent">
-				   	<div class="row-2 ">
-				    	<h2>Who Benefits from Plant Variety Protection?</h2>
-				     <div class="wrapper">
-				      <div class="col-1"	
-						<% @content_blocks.each do |c| %>
-							<h2><%= c.heading %></h2>
-							<%= raw(c.content) %>	
-						<% end %>
-				      </div>
-				      <div class="col-2" style="margin-top: 50px;">
-						<div id="pvpDiagramON" style="width: 535px; height: 483px; z-index:10; position: absolute; padding: 0px; margin: 0px; ">
-							<img src="/assets/pvp-on.jpg">
-						</div>
-						<div id="pvpDiagramOFF" style="width: 535px; height: 483px; z-index:100; position: absolute; padding: 0px; margin: 0px;" >
-							<img src="/assets/pvp-off.jpg"></div>
-						</div>
-							<div id="pvpCaptionON" style="margin-top: 540px; margin-left: 620px; z-index:10; position: absolute; display: none;"><a href="#">Click to see PVP Today</a></div>
-							<div id="pvpCaptionOFF" style="margin-top: 400px; margin-left: 600px; z-index:100; position: absolute; "><a href="#">Click to see PVP with Changes</a></div>
-						</div>
-				      </div>
-				     </div>
-				    </div>
-				   
-</div>
 <% content_for :javascript do %>	  
 <script>
 $(document).ready(function() {
@@ -44,3 +15,41 @@ $(document).ready(function() {
 	});
 </script>
 <% end %>
+<div id="page2b">
+			<div id="mainContent">
+				<div id="IPContent">
+					<div class="indent">
+				   	<div class="row-2 ">
+				    	<h2>Who Benefits from Plant Variety Protection?</h2>
+				     <div class="wrapper">
+				      <div class="col-1"><br>
+					UPOV's stated mission is:<div class="quote green" >To provide and promote an effective system of plant variety protection, with the aim of encouraging the development of new varieties of plants, for the benefit of society.</div> 
+					<p>If the goal is to benefit society, it is important to understand better whom the IP system is serving and who it is not. Critical questions include:</p>
+					<ul>
+						<li>Are certain segments of the population at risk of being left behind?</li>
+						<li>What is the potential impact intellectual property regimes have or may have on farmers&rsquo; ability to save and exchange seed?   </li>
+						<li>What are the technology preferences implicit in IP driven agricultural policies? </li>
+					</ul>			
+<p>
+								Futhermore, there is a need greater clarity on the links between IP policy-making and sustainable development, in particular food security and poverty alleviation.  </p>
+				      			<div id="morebox" style="float: left; width: 350px;">
+									<h3>More about Plant Variety Protection</h3>
+									<a href="ip.shtml">Intellectual Property &amp; Food Security &ndash; Overview</a><br>
+									<a href="ip-experts.shtml">Experts on PVP &amp; Food Security</a>
+								</div>
+				      </div>
+				      <div class="col-2" style="margin-top: 50px;">
+						<div id="pvpDiagramON" style="width: 535px; height: 483px; z-index:10; position: absolute; padding: 0px; margin: 0px; ">
+							<img src="images/pvp-on.jpg">
+						</div>
+						<div id="pvpDiagramOFF" style="width: 535px; height: 483px; z-index:100; position: absolute; padding: 0px; margin: 0px;" >
+							<img src="images/pvp-off.jpg"></div>
+						</div>
+							<div id="pvpCaptionON" style="margin-top: 540px; margin-left: 620px; z-index:10; position: absolute; display: none;"><a href="#">Click to see PVP Today</a></div>
+							<div id="pvpCaptionOFF" style="margin-top: 400px; margin-left: 600px; z-index:100; position: absolute; "><a href="#">Click to see PVP with Changes</a></div>
+						</div>
+				      </div>
+				     </div>
+				    </div>
+				   
+</div>

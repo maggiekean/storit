@@ -393,7 +393,7 @@ footer {
 }
 
 .indent {
-	padding:20px 10px 70px 20px;
+	padding:20px 10px 70px 10px;
 }
 
 .wrapper { 
@@ -419,7 +419,7 @@ margin-bottom: -3px;
 padding-right: 2px;
 padding-bottom: 2px;
 }
-#bgIcon, #actIcon, #membersIcon, #boardIcon, #staffIcon, #footnotesIcon, #instIcon, #historyIcon, #provisionsIcon, #originIcon, #infrastructureIcon, #readmoreIcon, #activitiesIcon {
+#bgIcon, #actIcon, #membersIcon, #boardIcon, #staffIcon, #footnotesIcon, #instIcon, #histIcon, #provisionsIcon, #originIcon, #readmoreIcon {
 	display:inline-block; 
 	border: 1px solid #60835b; 
 	border-radius: 5px; 
@@ -553,10 +553,6 @@ z-index: 2000;
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3 { page-break-after: avoid; }
 }
-div#aboutContent div.subtopicHeading { margin-left: 25px;}
-div#upovContent div.subtopicHeading { margin-left: 25px;}
-div#upovContent span#historyIcon, div#upovContent span#provisionsIcon, div#upovContent span#originIcon, div#upovContent span#infrastructureIcon { position: relative; top: -35px; left: 0px;}
-div#aboutContent span#bgIcon, div#aboutContent span#activitiesIcon, div#aboutContent span#membersIcon, div#aboutContent span#boardIcon, div#aboutContent span#staffIcon { position: relative; top: -35px; left: 0px;}
 .even { background: #eeeeee; }
 .odd { background: none; }
 .image_left { float: left; 	margin: 0 30px 10px 0; z-index: 100; background-color: #ffffff; }
