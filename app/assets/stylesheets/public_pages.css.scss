@@ -153,11 +153,11 @@ ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
 dd { margin: 0 0 0 40px; }
 nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
 /*--- list styles ---*/
-.img-list, .news-list li{
+ul.img-list, ul.news-list {
 	padding: 0px;
 }
 
-.img-list, .news-list {
+ul.img-list, ul.news-list {
 	margin: 0px;
 }
 .list1 {
